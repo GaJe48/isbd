@@ -1,0 +1,8 @@
+node_modules/
+.idea/
+*.mp4
+
+# hasil build (dibuat ulang dengan: bun run build)
+assets/app.js
+assets/app.css
+assets/*.map
