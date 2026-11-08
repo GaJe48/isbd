@@ -1,0 +1,11 @@
+.s08 .spec{position:absolute;left:330px;right:330px;top:560px;height:4px;background:linear-gradient(90deg,var(--blue),var(--purple),var(--red));border-radius:4px;transform-origin:left}
+.s08 .stop{position:absolute;top:560px}
+.s08 .stop i{display:block;width:34px;height:34px;border-radius:50%;background:var(--char);border:3px solid #fff}
+.s08 .stop .lbl{position:absolute;left:50%;transform:translateX(-50%);top:-130px;text-align:center;white-space:nowrap}
+.s08 .stop .lbl b{display:block;font:900 52px/1 var(--disp);font-stretch:125%}
+.s08 .stop .lbl small{display:block;margin-top:12px;font:600 21px var(--body);color:rgba(255,255,255,.6);letter-spacing:.1em;text-transform:uppercase}
+.s08 .spark{position:absolute;top:560px;left:330px;width:64px;height:64px;margin:-32px;border-radius:50%;background:radial-gradient(closest-side,#fff,#2F6FD6 45%,transparent);filter:blur(1px)}
+.s08 .dirs{position:absolute;left:330px;right:330px;top:640px;display:flex;justify-content:space-between;font:700 28px var(--body)}
+.s08 .dirs .r{color:#ff8b99}.s08 .dirs .l{color:var(--green)}
+.s08 .pulih{position:absolute;left:0;right:0;top:770px;text-align:center}
+.s08 .pulih b{display:inline-block;font:900 82px/1 var(--disp);font-stretch:125%}

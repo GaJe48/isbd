@@ -1,0 +1,4 @@
+.cards4{position:absolute;left:140px;right:140px;top:470px;display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.cards4 .card{height:420px;display:flex;flex-direction:column}
+.cards4 .card p{font:700 28px/1.35 var(--body);margin-top:34px}
+.cards4 .card .ft{margin-top:auto;font:600 19px var(--body);color:rgba(17,17,17,.55);letter-spacing:.1em;text-transform:uppercase}

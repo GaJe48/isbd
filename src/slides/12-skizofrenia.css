@@ -1,0 +1,10 @@
+.s12 .three{position:absolute;left:140px;right:140px;top:330px;display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.s12 .card{height:470px;display:flex;flex-direction:column}
+.s12 .card .sym{font:900 80px/1 var(--disp);font-stretch:125%}
+.s12 .card h4{margin-top:8px}
+.s12 .vis{height:120px;margin:14px 0 18px;position:relative}
+.s12 .vis svg{height:120px;overflow:visible}
+.s12 .card p{font-size:22px}
+.s12 .strip{position:absolute;left:140px;right:140px;top:850px;display:flex;gap:18px}
+.s12 .strip .pill{font-size:22px}
+.s12 .strip .no{color:#ff8b99}

@@ -1,0 +1,11 @@
+.s10 .tiles{position:absolute;left:140px;right:140px;top:285px;display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+.tile{height:270px;border-radius:24px;padding:26px 26px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);position:relative;cursor:pointer;transition:background .3s}
+.tile:hover{background:rgba(255,255,255,.11)}
+.tile .c{font:900 54px/1 var(--disp);font-stretch:125%}
+.tile .r{font:600 16px var(--body);color:rgba(255,255,255,.5);letter-spacing:.1em;margin-top:6px}
+.tile .g{font:700 19px/1.32 var(--body);margin-top:16px}
+.tile .e{position:absolute;left:26px;right:20px;bottom:22px;font:italic 500 17px/1.35 var(--body);color:rgba(255,255,255,.65)}
+.tile .ring{position:absolute;inset:-3px;border-radius:26px;padding:3px;background:var(--grad);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0}
+.tile .tag{position:absolute;right:16px;top:16px;font:800 13px var(--body);letter-spacing:.14em;text-transform:uppercase;padding:7px 12px;border-radius:99px;background:var(--grad);color:#fff;opacity:0}
+.tile.big{z-index:5}
+.s10 .msg{position:absolute;left:140px;right:140px;top:878px;font:700 38px var(--body)}

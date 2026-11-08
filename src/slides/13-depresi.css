@@ -1,0 +1,10 @@
+.s13 .big{position:absolute;left:140px;top:330px;font:900 150px/1 var(--disp);font-stretch:125%;white-space:nowrap;text-transform:uppercase}
+.s13 .cal{position:absolute;left:140px;top:540px;display:grid;grid-template-columns:repeat(7,82px);gap:14px}
+.s13 .cal i{--f:0;height:82px;border-radius:16px;border:1.5px solid rgba(255,255,255,.25);position:relative;overflow:hidden}
+.s13 .cal i::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#8a8fa3,#3d5f9c);transform:scaleY(var(--f,0));transform-origin:bottom}
+.s13 .cal b{position:absolute;left:10px;top:8px;font:600 15px var(--body);color:rgba(255,255,255,.6);z-index:1}
+.s13 .signs{position:absolute;left:1010px;right:140px;top:330px;display:flex;flex-direction:column;gap:22px}
+.s13 .signs .card{display:flex;align-items:center;gap:28px;padding:30px 34px}
+.s13 .signs .card h4{margin:0}
+.s13 .signs .card p{font-size:21px;color:rgba(255,255,255,.7)}
+.s13 .note{position:absolute;left:1010px;right:140px;top:880px}

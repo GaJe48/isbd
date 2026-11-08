@@ -1,0 +1,4 @@
+.s38 .rows{position:absolute;left:140px;right:140px;top:300px;display:flex;flex-direction:column;gap:22px}
+.s38 .card{display:flex;align-items:center;gap:36px;padding:30px 44px}
+.s38 .card p{font:600 26px/1.45 var(--body)}
+.s38 .card p .kw{font-weight:800;padding:2px 10px;border-radius:8px;background:linear-gradient(90deg,rgba(122,107,176,.35),rgba(240,160,75,.35));background-size:0% 100%;background-repeat:no-repeat}

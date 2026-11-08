@@ -1,0 +1,8 @@
+.agenda .vt{position:absolute;left:140px;top:150px}
+.agenda .vt div{font-size:168px;line-height:.86}
+.agenda .list{position:absolute;left:880px;right:140px;top:120px}
+.agenda .rail{position:absolute;left:44px;top:34px;bottom:34px;width:2px;background:linear-gradient(var(--blue),var(--mag),var(--orange));transform-origin:top}
+.agenda .it{display:flex;align-items:center;gap:40px;height:92px;border-bottom:1px solid rgba(255,255,255,.1);position:relative}
+.agenda .it .k{width:90px;height:50px;display:grid;place-items:center;font:900 30px/1 var(--disp);font-stretch:125%;background:var(--char);position:relative;z-index:1;border-radius:30px;border:1.5px solid rgba(255,255,255,.4)}
+.agenda .it .t{font:600 33px/1 var(--body)}
+.agenda .it .x{margin-left:auto;font:500 19px var(--body);color:rgba(255,255,255,.45)}

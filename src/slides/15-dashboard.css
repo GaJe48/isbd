@@ -1,0 +1,11 @@
+.s15 .dash{position:absolute;left:140px;right:140px;top:310px;display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.s15 .card{height:540px;display:flex;flex-direction:column;padding:38px 34px}
+.s15 .v{font:900 82px/1 var(--disp);font-stretch:112%;white-space:nowrap}
+.s15 .v small{font-size:.42em;font-stretch:110%}
+.s15 .card p{margin-top:22px;font-size:22px}
+.s15 .card .s{margin-top:auto;font:600 16px var(--body);letter-spacing:.12em;text-transform:uppercase;color:rgba(17,17,17,.5)}
+.s15 .ring{width:150px;height:150px;margin-top:20px}
+.s15 .ring circle{fill:none;stroke-width:16}
+.s15 .young{margin-top:22px;display:flex;align-items:center;gap:16px}
+.s15 .young .tag{font:800 15px var(--body);letter-spacing:.14em;text-transform:uppercase;padding:9px 14px;border-radius:99px;background:var(--grad);color:#fff;white-space:nowrap}
+.s15 .young .v2{font:900 54px/1 var(--disp);font-stretch:112%}

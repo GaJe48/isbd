@@ -1,0 +1,8 @@
+.s35 .fan{position:absolute;left:140px;right:140px;top:400px;height:460px}
+.s35 .rc{position:absolute;top:0;width:308px;height:440px;padding:36px 28px;display:flex;flex-direction:column}
+.s35 .rc .ic{width:96px;height:96px;border-radius:50%;background:var(--warm);display:grid;place-items:center;margin-bottom:30px}
+.s35 .rc .ic svg{width:50px;height:50px}
+.s35 .rc .ic svg *{fill:none;stroke:#fff;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round}
+.s35 .rc h4{font-size:27px}
+.s35 .rc p{font-size:20px}
+.s35 .claim{position:absolute;left:140px;right:140px;top:270px;font:800 44px/1.25 var(--body)}

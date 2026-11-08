@@ -1,0 +1,15 @@
+.s37 .circ{position:absolute;border-radius:50%;border:2px solid rgba(255,255,255,.5);display:flex;align-items:flex-start;justify-content:center;overflow:hidden}
+.s37 .circ .cl{margin-top:24px;font:800 22px var(--body);letter-spacing:.24em;text-transform:uppercase;white-space:nowrap}
+.s37 .cbody{position:absolute;left:0;right:0;top:0;bottom:0;padding:44px 40px 36px;opacity:0;display:flex;flex-direction:column}
+.s37 .cbody ul{margin-top:6px}
+.s37 .cn{position:absolute;right:34px;top:28px;font:900 84px/1 var(--disp);font-stretch:125%;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.28)}
+.s37 .lv{margin-top:auto;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);font:700 17px var(--body);letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.s37 .c-Mahasiswa .lv{color:var(--orange)}
+.s37 .cbody h4{font:900 40px/1 var(--disp);font-stretch:125%;margin-bottom:26px}
+.s37 .cbody li{list-style:none;font:500 22px/1.42 var(--body);margin-bottom:16px;padding-left:28px;position:relative;color:rgba(255,255,255,.88)}
+.s37 .cbody li::before{content:"";position:absolute;left:0;top:.55em;width:12px;height:12px;border-radius:50%;background:var(--orange)}
+.s37 .mhs{position:absolute;left:140px;right:140px;top:300px;bottom:130px;opacity:0;visibility:hidden}
+.s37 .mhs .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:22px;margin-top:40px}
+.s37 .mhs .card{height:400px;display:flex;flex-direction:column;padding:34px 30px}
+.s37 .mhs .card h4{font-size:25px;margin-top:26px}
+.s37 .mhs .card p{font-size:19px}

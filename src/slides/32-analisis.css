@@ -1,0 +1,15 @@
+.s32 svg.links{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visible;pointer-events:none}
+.s32 svg.links path{fill:none;stroke:url(#lg32);stroke-width:3}
+.s32 .finds{position:absolute;left:140px;width:980px;top:300px}
+.s32 .page{position:absolute;left:0;right:0;top:0;display:flex;flex-direction:column;gap:20px}
+.s32 .f{height:140px;border-radius:20px;padding:22px 30px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);opacity:.35;display:flex;gap:24px;align-items:center}
+.s32 .f.on{opacity:1;background:rgba(255,255,255,.1);border-color:rgba(240,160,75,.6)}
+.s32 .f .nd{width:54px;height:54px;font-size:22px}
+.s32 .f h4{font:800 25px/1.25 var(--body)}
+.s32 .f p{font:500 18.5px/1.42 var(--body);color:rgba(255,255,255,.75);margin-top:5px}
+.s32 .f .bp{display:inline-block;margin-top:8px;font:800 15px var(--body);letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;border-radius:8px;background:var(--red)}
+.s32 .chips{position:absolute;left:1420px;right:140px;top:300px;display:flex;flex-direction:column;gap:26px}
+.s32 .bab{height:100px;border-radius:999px;display:flex;align-items:center;gap:20px;padding:0 30px;border:1.5px solid rgba(255,255,255,.25);background:rgba(43,43,45,.6)}
+.s32 .bab b{font:900 34px var(--disp);font-stretch:125%}
+.s32 .bab span{font:700 22px/1.2 var(--body)}
+.s32 .bab.on{border-color:var(--orange);box-shadow:0 0 40px rgba(240,160,75,.35)}

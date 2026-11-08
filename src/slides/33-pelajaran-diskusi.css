@@ -1,0 +1,9 @@
+.s33 .lessons{position:absolute;left:140px;width:780px;top:330px;display:flex;flex-direction:column;gap:22px}
+.s33 .ls{display:flex;gap:26px;align-items:flex-start}
+.s33 .ls .nd{width:58px;height:58px;font-size:24px}
+.s33 .ls h4{font:800 27px/1.25 var(--body)}
+.s33 .ls p{font:500 20px/1.45 var(--body);color:rgba(255,255,255,.72);margin-top:4px}
+.s33 .qs{position:absolute;left:1020px;right:140px;top:300px;display:flex;flex-direction:column;gap:26px}
+.s33 .qq{position:relative;padding:34px 40px 34px 150px;min-height:180px;display:flex;align-items:center}
+.s33 .qq .qmk{position:absolute;left:30px;top:50%;transform:translateY(-50%);font:900 150px/1 var(--disp);color:transparent;-webkit-text-stroke:2px rgba(17,17,17,.4)}
+.s33 .qq p{font:700 25px/1.4 var(--body)}

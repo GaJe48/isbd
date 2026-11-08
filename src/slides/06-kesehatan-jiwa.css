@@ -1,0 +1,10 @@
+.s06 .quote{position:absolute;left:140px;width:860px;top:400px;font:400 31px/1.55 var(--body);color:rgba(255,255,255,.9);border-left:3px solid var(--blue);padding-left:36px}
+.s06 .quote b{color:#fff;font-weight:700}
+.s06 .cite{display:block;margin-top:22px;font:600 19px var(--body);letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.s06 .goo{position:absolute;left:1120px;top:200px;width:660px;height:660px;filter:url(#goo)}
+.s06 .ball{position:absolute;left:50%;top:50%;width:200px;height:200px;margin:-100px;border-radius:50%}
+.s06 .lbls{position:absolute;left:1120px;top:200px;width:660px;height:660px}
+.s06 .lb{position:absolute;left:50%;top:50%;font:800 25px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
+.s06 .core{position:absolute;left:50%;top:50%;text-align:center;font:900 40px/1 var(--disp);font-stretch:125%}
+.s06 .abil{position:absolute;left:1060px;right:100px;top:880px;display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.s06 .abil .pill{font-size:21px;padding:12px 22px}

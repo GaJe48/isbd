@@ -1,0 +1,13 @@
+.s22 .deck{position:absolute;left:300px;top:310px;width:900px;height:520px;perspective:2200px}
+.s22 .fc{position:absolute;inset:0;transform-style:preserve-3d}
+.s22 .face{position:absolute;inset:0;border-radius:32px;backface-visibility:hidden;-webkit-backface-visibility:hidden;padding:56px 64px;display:flex;flex-direction:column}
+.s22 .face.m{background:#3a3a3e;border:1.5px solid rgba(255,255,255,.18);box-shadow:0 40px 90px rgba(0,0,0,.45)}
+.s22 .face.f{transform:rotateY(180deg);background:linear-gradient(135deg,rgba(47,111,214,.95),rgba(80,160,140,.95));box-shadow:0 40px 90px rgba(47,111,214,.35)}
+.s22 .face .lb{font:800 22px var(--body);letter-spacing:.34em;text-transform:uppercase;opacity:.8;display:flex;justify-content:space-between}
+.s22 .face .tx{margin-top:auto;font:900 50px/1.12 var(--disp);font-stretch:110%;text-transform:uppercase}
+.s22 .face.m .tx{color:rgba(255,255,255,0);-webkit-text-stroke:1.6px #fff}
+.s22 .face.f .tx{font:700 44px/1.3 var(--body);text-transform:none}
+.s22 .face .qz{margin-top:24px;font:italic 500 22px var(--body);opacity:.6}
+.s22 .done{position:absolute;left:1300px;top:300px;width:480px}
+.s22 .done .d{height:96px;border-radius:18px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);margin-bottom:14px;padding:16px 22px;display:flex;gap:18px;align-items:center;font:600 19px/1.3 var(--body)}
+.s22 .done .d i{flex:none;width:40px;height:40px;border-radius:50%;background:var(--grad);display:grid;place-items:center;font:800 18px var(--body);font-style:normal}

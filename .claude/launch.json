@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "static",
-      "runtimeExecutable": "node",
-      "runtimeArgs": ["C:/Users/uwogh/AppData/Local/Temp/claude/129de01c2dfe205f/9a7bf5d4-e3d4-47dd-95f3-5bf32c328a6a/scratchpad/serve.js", "C:/Users/uwogh/klod/tugas-isbd", "5173"],
+      "runtimeExecutable": "bun",
+      "runtimeArgs": ["tools/dev.ts"],
       "port": 5173
     }
   ]

@@ -1,0 +1,14 @@
+.s34 .vp{position:absolute;left:0;right:0;top:300px;height:640px;overflow:hidden}
+.s34 .rail{position:absolute;left:0;top:0;height:640px;display:flex;align-items:flex-start;padding-left:300px}
+.s34 .lineL{position:absolute;left:0;top:200px;height:2px;background:rgba(255,255,255,.3)}
+.s34 .yr{width:640px;flex:none;position:relative;padding-right:60px;opacity:.28}
+.s34 .yr.on{opacity:1}
+.s34 .yr .y{font:900 170px/1 var(--disp);font-stretch:125%;color:rgba(255,255,255,0);-webkit-text-stroke:2px #fff}
+.s34 .yr .pt{position:absolute;left:0;top:192px;width:18px;height:18px;border-radius:50%;background:#fff}
+.s34 .yr h4{margin-top:60px;font:800 36px/1.2 var(--body)}
+.s34 .yr p{margin-top:14px;font:500 24px/1.45 var(--body);color:rgba(255,255,255,.8)}
+.s34 .pasal{position:absolute;left:820px;right:120px;top:300px;padding:44px 50px}
+.s34 .pasal h4{font-size:32px}
+.s34 .pasal .pp{display:flex;gap:20px;margin-top:22px}
+.s34 .pasal .pp b{flex:none;font:900 26px var(--disp);font-stretch:125%;color:var(--mag);width:150px}
+.s34 .pasal .pp p{font-size:22px}

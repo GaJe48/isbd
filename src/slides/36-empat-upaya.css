@@ -1,0 +1,13 @@
+.s36 svg.cyc{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visible}
+.s36 .st{position:absolute;font:900 30px var(--disp);font-stretch:125%;padding:18px 26px;border-radius:999px;background:#2f2f33;border:2px solid rgba(255,255,255,.25);white-space:nowrap;box-shadow:0 14px 30px rgba(0,0,0,.35)}
+.s36 .st.on{border-color:var(--orange);box-shadow:0 0 40px rgba(240,160,75,.45)}
+.s36 .panel{position:absolute;left:1220px;right:140px;top:340px;height:560px}
+.s36 .pc{position:absolute;inset:0;padding:48px 52px;display:flex;flex-direction:column}
+.s36 .pi ol{margin-top:26px;list-style:none;display:flex;flex-direction:column;gap:14px}
+.s36 .pi li{display:flex;align-items:center;gap:18px;font:700 26px var(--body)}
+.s36 .pi li i{width:44px;height:44px;border-radius:50%;background:var(--warm);display:grid;place-items:center;font:800 19px var(--body);font-style:normal;color:#fff}
+.s36 .pc .k{font:900 24px var(--disp);font-stretch:125%;color:var(--mag);letter-spacing:.06em}
+.s36 .pc h4{font-size:46px;font-family:var(--disp);font-stretch:125%;font-weight:900;margin:10px 0 18px}
+.s36 .pc p{font-size:25px}
+.s36 .pc .stat{margin-top:auto;font:900 76px/1 var(--disp);font-stretch:110%}
+.s36 .pc .stat small{display:block;font:600 21px/1.4 var(--body);margin-top:12px;color:rgba(17,17,17,.65)}

@@ -1,0 +1,11 @@
+.s14 .chap{position:absolute;right:50px;top:40px;font:900 200px/1 var(--disp);font-stretch:125%;color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.2)}
+.s14 .head{position:absolute;left:0;right:0;top:170px;text-align:center}
+.s14 .head .disp{font-size:150px}
+.s14 .people{position:absolute;left:0;right:0;top:420px;display:flex;justify-content:center;gap:34px}
+.s14 .people svg{width:110px;height:220px}
+.s14 .people path,.s14 .people circle{fill:#fff}
+.s14 .cap{position:absolute;left:0;right:0;top:700px;text-align:center;font:700 34px var(--body);letter-spacing:.06em}
+.s14 .cap b{color:#ff8b99}
+.s14 .pct{position:absolute;left:0;right:0;top:780px;text-align:center}
+.s14 .pct .disp{font-size:110px}
+.s14 .pct .small{font-size:24px;margin-top:6px;color:rgba(255,255,255,.75)}

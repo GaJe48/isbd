@@ -1,0 +1,7 @@
+.s18 svg.venn{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visible}
+.s18 .vc circle{stroke-width:3}
+.s18 .vl{position:absolute;font:900 34px/1 var(--disp);font-stretch:125%;text-transform:uppercase;white-space:nowrap}
+.s18 .list{position:absolute;width:460px}
+.s18 .list h5{font:800 22px var(--body);letter-spacing:.2em;text-transform:uppercase;margin-bottom:14px}
+.s18 .list li{list-style:none;font:500 23px/1.5 var(--body);color:rgba(255,255,255,.85);padding-left:26px;position:relative}
+.s18 .list li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:10px;border-radius:50%;background:currentColor;opacity:.6}

@@ -1,0 +1,9 @@
+.s28 .file{position:absolute;left:140px;top:150px;width:1040px;padding:44px 52px;transform-origin:top}
+.s28 .tab{position:absolute;left:52px;top:-38px;padding:10px 26px;background:rgba(196,196,200,.86);border-radius:14px 14px 0 0;font:800 17px var(--body);letter-spacing:.2em;text-transform:uppercase;color:#111}
+.s28 .pr{display:grid;grid-template-columns:240px 1fr;gap:24px;padding:17px 0;border-bottom:1px solid rgba(17,17,17,.12)}
+.s28 .pr:last-child{border-bottom:0}
+.s28 .pr dt{font:800 18px/1.5 var(--body);letter-spacing:.12em;text-transform:uppercase;color:rgba(17,17,17,.55)}
+.s28 .pr dd{font:600 22px/1.45 var(--body)}
+.s28 .rt{position:absolute;left:1280px;right:120px;top:220px}
+.s28 .rt .disp{font-size:110px}
+.s28 .rt .lead{margin-top:40px;font-size:27px}

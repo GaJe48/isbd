@@ -1,0 +1,11 @@
+.s16 .bars{position:absolute;left:140px;right:140px;top:330px}
+.s16 .br{display:flex;align-items:center;height:120px;gap:30px}
+.s16 .br .who{width:130px;font:900 40px/1 var(--disp);font-stretch:125%}
+.s16 .br .ratio{width:330px;font:800 40px var(--body)}
+.s16 .br .bar{height:56px;border-radius:12px;transform-origin:left}
+.s16 .callout{position:absolute;left:600px;top:600px;font:700 34px var(--body)}
+.s16 .callout b{font:900 60px/1 var(--disp);font-stretch:125%;margin-right:14px}
+.s16 .dots{position:absolute;left:140px;top:330px}
+.s16 .dots canvas{display:block}
+.s16 .dl{position:absolute;left:140px;right:140px;top:880px;font:700 32px var(--body)}
+.s16 .dl b.l{color:var(--green)}

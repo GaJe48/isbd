@@ -1,0 +1,9 @@
+.s30 .line{position:absolute;left:200px;right:200px;top:600px;height:3px;background:rgba(255,255,255,.3);transform-origin:left}
+.s30 .tn{position:absolute;top:600px;width:28px;height:28px;margin:-14px;border-radius:50%;background:var(--char);border:3px solid rgba(255,255,255,.5)}
+.s30 .tn.on{border-color:var(--orange);background:var(--orange);box-shadow:0 0 0 10px rgba(240,160,75,.18),0 0 40px rgba(240,160,75,.8)}
+.s30 .tc{position:absolute;width:290px;transform:translateX(-50%)}
+.s30 .tc.up{bottom:520px}.s30 .tc.dn{top:640px}
+.s30 .tc .k{font:900 22px var(--disp);font-stretch:125%;color:var(--orange)}
+.s30 .tc h4{font:800 25px/1.25 var(--body);margin:6px 0 10px}
+.s30 .tc p{font:500 18.5px/1.45 var(--body);color:rgba(255,255,255,.78)}
+.s30 .stem{position:absolute;width:2px;background:rgba(240,160,75,.6);transform-origin:center}

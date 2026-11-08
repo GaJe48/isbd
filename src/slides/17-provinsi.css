@@ -1,0 +1,8 @@
+.s17 .chart{position:absolute;left:140px;right:200px;top:340px}
+.s17 .pr{display:grid;grid-template-columns:400px 1fr;align-items:center;height:150px}
+.s17 .pr .nm{font:700 34px var(--body)}
+.s17 .pr .track{position:relative;height:84px}
+.s17 .pr .bar{height:84px;border-radius:14px;transform-origin:left;display:flex;align-items:center;justify-content:flex-end;padding-right:26px}
+.s17 .pr .bar span{font:900 42px/1 var(--disp);font-stretch:112%;color:#fff}
+.s17 .avg{position:absolute;top:-30px;bottom:-30px;width:0;border-left:3px dashed rgba(255,255,255,.55)}
+.s17 .avg span{position:absolute;bottom:-50px;left:-120px;width:240px;text-align:center;font:600 19px var(--body);color:rgba(255,255,255,.75)}

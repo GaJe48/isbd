@@ -1,0 +1,8 @@
+.s39 .morph{position:absolute;left:0;right:0;top:380px;height:200px}
+.s39 .mline{position:absolute;left:0;right:0;top:0;text-align:center;white-space:nowrap;font-size:100px}
+.s39 .mline span{display:inline-block;white-space:pre}
+.s39 .from span{color:rgba(255,255,255,0);-webkit-text-stroke:2px #fff}
+.s39 .lbl{position:absolute;left:0;right:0;top:300px;text-align:center}
+.s39 .lbl .kicker{justify-content:center}
+.s39 .gov{position:absolute;left:300px;right:300px;top:680px;text-align:center;font:600 34px/1.5 var(--body);color:rgba(255,255,255,.88)}
+.s39 .gov b{font-weight:800}
