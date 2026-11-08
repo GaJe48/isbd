@@ -6,3 +6,4 @@ node_modules/
 assets/app.js
 assets/app.css
 assets/*.map
+!media/wawancara.mp4
