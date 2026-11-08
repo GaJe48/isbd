@@ -20,10 +20,10 @@ function togglePlay(v: HTMLVideoElement) {
   else v.pause();
 }
 
+/** satu baris subtitle; kelas P (pewawancara) atau N (narasumber) membedakan gayanya */
 function subLine(L: Sub) {
-  const who = L.sp === 'P' ? '<span class="who">Pewawancara</span>' : '';
   const words = L.w.map(([t, w]) => `<span class="w" data-s="${t}">${w}</span>`).join(' ');
-  return `<div class="sl ${L.sp}${L.key ? ' key' : ''}">${who}${words}${L.key ? '<span class="ul"></span>' : ''}</div>`;
+  return `<div class="sl ${L.sp}">${words}</div>`;
 }
 
 export default defineSlide({
@@ -33,8 +33,6 @@ export default defineSlide({
     <div class="lap"><div class="bezel"></div><div class="base"></div><div class="scr"><div class="vslot" style="position:absolute;inset:0"></div>
       <div class="play"><svg viewBox="0 0 80 80" width="80" height="80"><path d="M28 18 L62 40 L28 62 Z" fill="#18181b"/></svg></div></div></div>
     <div class="shade"></div>
-    <div class="l3"><i></i><div><b>Wawancara keluarga ODGJ</b><span>Studi kasus demensia · istri pendamping ± 6 tahun</span></div></div>
-    <div class="seg"><small>Q1</small><b></b></div>
     <div class="subs"></div>
     <div class="ctl" data-noclick><div class="track"><div class="fillbar"></div>${SEGMENTS.map((s, k) => `<span class="mk" data-k="${k}" style="left:${pct(s.t, FALLBACK)}"></span>`).join('')}</div>
       ${SEGMENTS.map((s, k) => `<span class="mkl" style="left:${pct(s.t, FALLBACK)}">Q${k + 1} ${s.label}</span>`).join('')}<span class="time">0:00 / ${mmss(FALLBACK)}</span></div>
@@ -46,7 +44,7 @@ export default defineSlide({
     $('.vslot', el).appendChild(v);
     v.muted = false;
     v.playbackRate = 1;
-    el._v = v; el._line = null; el._seg = -1; el._zoomed = false;
+    el._v = v; el._line = null; el._zoomed = false;
     gsap.set($('.lap', el), { scale: .56, y: 40 });
     if (!DECK.building && v.currentTime < .3) { try { v.currentTime = .4; } catch { /* metadata belum siap */ } }
   },
@@ -67,9 +65,8 @@ export default defineSlide({
       tl.to($('.intro', el), { autoAlpha: 0, y: -40, duration: .6, ease: 'power2.in' })
         .to($('.play', el), { autoAlpha: 0, scale: 1.6, duration: .5 }, 0)
         .to($('.lap', el), { scale: 1, y: 0, duration: 1.7, ease: 'expo.inOut' }, .2)
-        .to($('.shade', el), { opacity: 1, duration: .8 }, 1.4)
-        .to($('.ctl', el), { opacity: 1, duration: .6 }, 1.5)
-        .to($('.ctl', el), { opacity: 0, duration: .8 }, 5);
+        .to([$('.ctl', el), $('.shade', el)], { opacity: 1, duration: .6 }, 1.5)
+        .to([$('.ctl', el), $('.shade', el)], { opacity: 0, duration: .8 }, 5);
       if (!DECK.building) tl.call(() => {
         const v = video(el);
         if (v.ended || v.currentTime > dur(v) - 1) v.currentTime = 0;
@@ -79,8 +76,7 @@ export default defineSlide({
   ],
 
   enter(el) {
-    const v = video(el), subs = $('.subs', el), fill = $('.fillbar', el), time = $('.time', el), seg = $('.seg', el), l3 = $('.l3', el);
-    let l3shown = false;
+    const v = video(el), subs = $('.subs', el), fill = $('.fillbar', el), time = $('.time', el);
 
     // penanda Q1..Qn mengikuti durasi video sebenarnya
     const placeMarkers = () => {
@@ -107,32 +103,13 @@ export default defineSlide({
           gsap.fromTo(subs, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: .25, ease: 'power2.out' });
         }
       }
-      if (L) {
-        $$('.w', subs).forEach(w => w.classList.toggle('on', t >= +w.dataset.s!));
-        const ul = subs.querySelector('.ul');
-        if (ul && t > L.s + .4) ul.classList.add('on');
-      }
-
-      // kartu pertanyaan saat segmen berganti
-      let k = -1;
-      SEGMENTS.forEach((s, j) => { if (t >= s.t - .2) k = j; });
-      if (el._zoomed && k !== el._seg && !v.paused) {
-        el._seg = k;
-        if (k >= 1) {
-          $('small', seg).textContent = `Q${k + 1} · ${SEGMENTS[k].label}`;
-          $('b', seg).textContent = SEGMENTS[k].q;
-          gsap.timeline().fromTo(seg, { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: .6, ease: 'power3.out' }).to(seg, { opacity: 0, x: -20, duration: .6 }, '+=4.5');
-        }
-      }
-      if (el._zoomed && !l3shown && t > .3 && t < 6 && !v.paused) {
-        l3shown = true;
-        gsap.timeline().fromTo(l3, { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: .7, ease: 'power3.out' }).to(l3, { opacity: 0, duration: .7 }, '+=4.6');
-      }
+      // kata menyala saat diucapkan
+      if (L) $$('.w', subs).forEach(w => w.classList.toggle('on', t >= +w.dataset.s!));
     };
     el._render = render;
     gsap.ticker.add(render);
 
-    const seek = (t: number) => { v.currentTime = Math.max(0, Math.min(t, dur(v) - .2)); el._seg = -1; render(); };
+    const seek = (t: number) => { v.currentTime = Math.max(0, Math.min(t, dur(v) - .2)); render(); };
     $('.track', el).addEventListener('click', e => {
       e.stopPropagation();
       const r = (e.currentTarget as HTMLElement).getBoundingClientRect();

@@ -25,6 +25,5 @@ r.all.forEach((l, i) => console.log(`${String(i + 1).padStart(2, '0')} ${mmss(l.
 console.log(`\n${r.wordCount} kata (${r.perKata ? 'per kata' : 'per baris'}) -> ${r.subs.length} baris -> ${path.relative(ROOT, OUT)}`);
 r.segments.forEach((s, k) => console.log(`Q${k + 1} ${mmss(s.t)} ${s.label}`));
 r.quotes.forEach((q, k) => console.log(`★${k + 1} ${mmss(q.t)} ${q.teks}`));
-const nKey = r.subs.filter(l => l.key).length;
-if (nKey !== CONFIG.kutipan.length) console.warn(`! ${nKey} baris kutipan ditemukan, diharapkan ${CONFIG.kutipan.length}`);
+r.quotes.forEach((q, k) => { if (!q.t) console.warn(`! kutipan ${k + 1} tidak ditemukan di SRT: "${CONFIG.kutipan[k].cari}"`); });
 if (r.segments.length !== CONFIG.segmen.length) console.warn(`! ${r.segments.length} segmen ditemukan, diharapkan ${CONFIG.segmen.length}`);

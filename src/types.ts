@@ -56,7 +56,6 @@ export interface Sub {
   e: number;
   sp: 'P' | 'N';
   w: [number, string][];
-  key?: 1;
 }
 
 export interface Segment {

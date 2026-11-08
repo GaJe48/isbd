@@ -165,7 +165,7 @@ export function buildSubtitles(srt: string, cfg: SubtitleConfig): Result {
     if (q.join(' ').includes('?')) segments.push({ t: l.s, label: cfg.segmen[segments.length] || `Pertanyaan ${segments.length + 1}`, q: q.join(' ') });
   });
 
-  const subs: Sub[] = shown.map((l, i) => ({ id: i + 1, s: l.s, e: l.e, sp: l.sp, w: l.w, ...(l.key && { key: 1 as const }) }));
+  const subs: Sub[] = shown.map((l, i) => ({ id: i + 1, s: l.s, e: l.e, sp: l.sp, w: l.w }));
   const quotes: Quote[] = cfg.kutipan.map((q, i) => ({ t: quoteTime[i] ?? 0, teks: q.teks, siapa: q.siapa, makna: q.makna }));
   return { all, subs, segments, quotes, perKata, wordCount: flat.length };
 }
