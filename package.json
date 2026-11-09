@@ -7,13 +7,17 @@
     "build": "bun tools/build.ts",
     "subs": "bun tools/subtitle/cli.ts && bun tools/build.ts",
     "test": "bun test",
-    "check": "tsc --noEmit"
+    "check": "tsc --noEmit",
+    "pptx": "bun tools/pptx/export.ts && uv run --no-project --with fonttools --with brotli --with skia-pathops python tools/pptx/fonts.py && bun tools/pptx/build.ts",
+    "pptx:video": "bun tools/pptx/video.ts",
+    "pptx:cek": "bun tools/pptx/export.ts --shots && uv run --no-project --with fonttools --with brotli --with skia-pathops python tools/pptx/fonts.py && bun tools/pptx/build.ts && powershell -NoProfile -ExecutionPolicy Bypass -File tools/pptx/render.ps1 && bun tools/pptx/compare.ts"
   },
   "dependencies": {
     "gsap": "^3.15.1"
   },
   "devDependencies": {
     "@types/bun": "^1.4.4",
+    "playwright-core": "^1.65.0",
     "typescript": "^7.0.2"
   }
 }

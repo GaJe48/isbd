@@ -7,3 +7,6 @@ assets/app.js
 assets/app.css
 assets/*.map
 !media/wawancara.mp4
+
+# hasil ekspor PPTX (bun tools/pptx/build.ts)
+out/
