@@ -1,7 +1,7 @@
-import { defineSlide, type SlideEl, type Sub } from '../types';
+import { defineSlide, type SlideEl, type Sub, type SubStyle } from '../types';
 import { FX, $, $$, gsap, mmss } from '../fx';
 import { DECK } from '../engine/state';
-import { SUBS, SEGMENTS } from '../data/subs';
+import { SUBS, SEGMENTS, SUB_STYLE } from '../data/subs';
 import './29-video.css';
 
 /* ---------------- S29 · VIDEO ----------------
@@ -20,10 +20,15 @@ function togglePlay(v: HTMLVideoElement) {
   else v.pause();
 }
 
-/** satu baris subtitle; kelas P (pewawancara) atau N (narasumber) membedakan gayanya */
+/** gaya baris per pembicara, dari Style di "Timeline 1.ass" (lewat SUB_STYLE) */
+const look = (s: SubStyle) =>
+  `--on:${s.on};--off:${s.off};--off-a:${s.offA};background:${s.box};font-size:${s.px}px;font-style:${s.italic ? 'italic' : 'normal'}`;
+const LOOK = { N: look(SUB_STYLE.N), P: look(SUB_STYLE.P) };
+
+/** satu baris subtitle; P (pewawancara) atau N (narasumber) menentukan gayanya */
 function subLine(L: Sub) {
   const words = L.w.map(([t, w]) => `<span class="w" data-s="${t}">${w}</span>`).join(' ');
-  return `<div class="sl ${L.sp}">${words}</div>`;
+  return `<div class="sl ${L.sp}" style="${LOOK[L.sp]}">${words}</div>`;
 }
 
 export default defineSlide({

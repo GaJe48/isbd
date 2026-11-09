@@ -4,7 +4,7 @@ import { QUOTES } from '../data/subs';
 import './31-kutipan-kunci.css';
 
 /* ---------------- S31 · Kutipan kunci ----------------
-   Teks, pembicara, dan makna diatur di tools/subtitle/config.ts; menitnya diambil dari SRT. */
+   Teks, pembicara, dan makna ada di src/data/kutipan.ts; menitnya dari baris "kutipan <n>" di Timeline 1.ass. */
 const N = QUOTES.length;
 
 function showQ(el: SlideEl, tl: Timeline, k: number, at: number) {

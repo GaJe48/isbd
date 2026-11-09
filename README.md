@@ -15,12 +15,37 @@ Tombol: → / Spasi / klik = lanjut · ← = mundur · O = ikhtisar · N = catat
 bun install
 bun run dev      # build dev + build ulang otomatis + server di http://localhost:5173
 bun run build    # build final -> assets/app.js + assets/app.css (jalankan sebelum presentasi)
-bun run subs     # Timeline 1.srt -> src/data/subs.ts, lalu build
+bun run subs     # Timeline 1.ass -> src/data/subs.ts, lalu build
 bun run test     # uji alat subtitle
 bun run check    # cek tipe TypeScript
 ```
 
 Build memakai format IIFE karena modul ES tidak bisa dimuat dari `file://`.
+
+## Subtitle video wawancara
+
+Sumbernya `Timeline 1.ass`, diedit dengan [Aegisub](https://aegisub.org). Video ikut terbuka otomatis kalau
+`Timeline 1.mp4` ada di folder yang sama. Setelah menyimpan, jalankan `bun run subs`.
+
+- Satu baris Dialogue = satu baris subtitle di layar. Baris yang dijadikan Comment tidak ditampilkan.
+- Style = pembicara: **Pewawancara** (ungu) atau **Narasumber** (putih).
+- Timing per kata memakai tag karaoke `{\k..}`: *Timing → Karaoke* di Aegisub, geser batas kata di waveform.
+- Kolom Effect (tanpa koma, pisahkan dengan `;`): `segmen: <label>` untuk penanda Q1, Q2, ... di garis waktu video,
+  `kutipan <n>` untuk kutipan kunci ke-n di slide 31. Teks rapi kutipannya ada di `src/data/kutipan.ts`.
+
+`bun run subs` memberi peringatan kalau ada baris yang tumpang tindih, terlalu panjang, atau kutipan yang belum ditandai.
+Preview di Aegisub memakai font Montserrat SemiBold kalau terpasang (TTF ada di `out/pptx/fonts/`).
+
+File ini satu-satunya sumber subtitle, termasuk gayanya. Ubah Style di Aegisub (*Subtitle → Styles Manager*):
+
+| Isi Style | Web (slide 29) | Video PPTX |
+|---|---|---|
+| warna utama / sekunder (kata sudah / belum diucapkan, termasuk transparansinya) | ✓ | ✓ |
+| warna garis tepi + BorderStyle 3 (kotak latar) | ✓ | ✓ |
+| ukuran huruf, italic | ✓ | ✓ |
+| font, margin, posisi | – (tetap Montserrat 600, posisi tata letak slide) | ✓ |
+
+Setelah mengubah: `bun run subs` (web) dan `bun run pptx:video` (video PPTX, membaca `.ass` langsung).
 
 ## Versi PowerPoint
 
@@ -28,7 +53,7 @@ Hasil: `out/pptx/presentasi.pptx`. Satu slide PowerPoint per langkah klik, tanpa
 font Archivo + Montserrat ditanam di dalam file (tidak perlu di-install), video wawancara dengan subtitle tertanam.
 
 ```bash
-bun run pptx:video   # sekali saja (atau setelah subtitle berubah): Timeline 1.mp4 + subtitle -> out/pptx/wawancara.mp4
+bun run pptx:video   # sekali saja (atau setelah subtitle berubah): Timeline 1.mp4 + Timeline 1.ass -> out/pptx/wawancara.mp4
 bun run pptx         # ekspor dari browser (Edge) -> buat font tertanam -> tulis presentasi.pptx
 bun run pptx:cek     # render lewat PowerPoint dan bandingkan dengan web -> out/pptx/cmp/N.png (kiri web, kanan PPT)
 ```
@@ -47,11 +72,12 @@ src/
   fx/                  helper animasi (FX.rise, FX.count, ...), templat HTML, svgText
   slides/              satu slide = NN-nama.ts + NN-nama.css; urutan di index.ts
   data/info.ts         nama kelompok, anggota, dosen
+  data/kutipan.ts      teks kutipan kunci slide 31
   data/subs.ts         dibuat otomatis oleh bun run subs (jangan diedit)
   styles/              base.css (panggung, tipografi, komponen), shared.css
 tools/
   build.ts, dev.ts     build dan server lokal
-  subtitle/            config.ts (pewawancara, kutipan, aturan baris), core.ts, cli.ts, core.test.ts
+  subtitle/            core.ts (pembaca .ass), cli.ts, core.test.ts
   pptx/                export.ts + extract.ts (browser -> dump.json), fonts.py (font tertanam), build.ts (-> .pptx),
                        video.ts (subtitle dibakar ke video), render.ps1 + compare.ts (cek hasil)
 assets/                font, gambar, dan hasil build

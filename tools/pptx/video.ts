@@ -1,13 +1,16 @@
-/* Video wawancara untuk PPTX: subtitle karaoke (src/data/subs.ts) dibakar ke video lewat ffmpeg/libass,
+/* Video wawancara untuk PPTX: subtitle karaoke dari "Timeline 1.ass" dibakar ke video lewat ffmpeg/libass,
    karena PowerPoint tidak bisa menjalankan subtitle per kata seperti slide 29 di web.
+   Teks, timing, dan gaya (font, ukuran, warna, kotak, margin) semuanya dari "Timeline 1.ass".
    Hasil: out/pptx/wawancara.mp4 (dipakai build.ts kalau ada). Pakai: bun tools/pptx/video.ts [--ass] */
 import { existsSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
-import { SUBS } from '../../src/data/subs';
+import { buildSubtitles, STYLE_FIELDS, type AssStyle } from '../subtitle/core';
 
 const ROOT = path.resolve(import.meta.dir, '..', '..');
 const OUT = path.join(ROOT, 'out', 'pptx');
 mkdirSync(OUT, { recursive: true });
+const { subs: SUBS, styles, warnings } = buildSubtitles(await Bun.file(path.join(ROOT, 'Timeline 1.ass')).text());
+warnings.forEach(w => console.warn(`! Timeline 1.ass ${w}`));
 const SRC = [path.join(ROOT, 'Timeline 1.mp4'), path.join(ROOT, 'media', 'wawancara.mp4')].find(f => existsSync(f))!;
 
 const ts = (t: number) => {
@@ -18,14 +21,16 @@ const ts = (t: number) => {
 /** tag karaoke ASS {\k<senti-detik>} */
 const kara = (t: number) => `{${String.fromCharCode(92)}k${Math.max(0, Math.round(t * 100))}}`;
 
-/* Gaya meniru .s29 .sl: Montserrat 600 44px, kata belum diucapkan 42% (warna sekunder karaoke),
-   kotak rgba(10,10,14,.42) di bawah layar. Ukuran font libass = tinggi ascender+descender (~1,22 em Montserrat).
-   Dua lapis: lapis 0 hanya kotak (teks transparan, satu kotak per baris), lapis 1 teks karaoke
-   (kalau digabung, libass menggambar kotak per potongan karaoke sehingga sambungannya terlihat). */
-const FS = Math.round(44 * 1.22);
-// Name, Font, Size, Primary, Secondary, Outline, Back, Bold, Italic, U, S, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Align, ML, MR, MV, Enc
-const style = (name: string, font: string, primary: string, secondary: string, outline: string, back: string, italic: number, border: number, ol: number, sh: number) =>
-  `Style: ${name},${font},${FS},${primary},${secondary},${outline},${back},0,${italic},0,0,100,100,0,0,${border},${ol},${sh},2,246,246,142,1`;
+/* Dua lapis per baris: lapis 0 hanya kotak/garis tepi (teks transparan), lapis 1 teks karaoke tanpa kotak.
+   Kalau digabung, libass menggambar kotak per potongan karaoke sehingga sambungannya terlihat.
+   Satu-satunya tambahan di luar .ass: bayangan lembut di teks (meniru text-shadow di web). */
+const TRANSPARENT = '&HFF000000';
+const line = (st: AssStyle, name: string, over: Record<string, string | number>) =>
+  `Style: ${STYLE_FIELDS.map(k => k === 'name' ? name : (over[k] ?? st.raw[k])).join(',')}`;
+const styleLines = (['N', 'P'] as const).flatMap(sp => [
+  line(styles[sp], sp, { outlinecolour: TRANSPARENT, backcolour: '&H66000000', borderstyle: 1, outline: 0, shadow: 2 }),
+  line(styles[sp], sp + 'Box', { primarycolour: TRANSPARENT, secondarycolour: TRANSPARENT }),
+]).join(String.fromCharCode(10));
 const ass = `[Script Info]
 ScriptType: v4.00+
 PlayResX: 1920
@@ -35,10 +40,7 @@ ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-${style('N', 'Montserrat SemiBold', '&H00FFFFFF', '&H94FFFFFF', '&HFF000000', '&H66000000', 0, 1, 0, 2)}
-${style('P', 'Montserrat', '&H00F5C6CF', '&H94F5C6CF', '&HFF000000', '&H66000000', -1, 1, 0, 2)}
-${style('NBox', 'Montserrat SemiBold', '&HFF000000', '&HFF000000', '&H940E0A0A', '&HFF000000', 0, 3, 14, 0)}
-${style('PBox', 'Montserrat', '&HFF000000', '&HFF000000', '&H940E0A0A', '&HFF000000', -1, 3, 14, 0)}
+${styleLines}
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text

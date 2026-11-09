@@ -1,0 +1,98 @@
+[Script Info]
+; Subtitle video wawancara (slide 29). Diedit dengan Aegisub (https://aegisub.org), lalu: bun run subs
+; Satu baris Dialogue = satu baris subtitle di layar. Style = pembicara (Pewawancara / Narasumber).
+; Isi Style dipakai web (slide 29) dan video PPTX: warna utama = kata yang sudah diucapkan, warna sekunder = yang belum,
+;   warna garis tepi + BorderStyle 3 = kotak latar, ukuran huruf, italic. Video PPTX juga memakai font dan margin.
+; Timing per kata = tag karaoke {\k..} (Aegisub: Timing > Karaoke). Baris Comment tidak ditampilkan.
+; Kolom Effect (tanpa koma, pisahkan dengan ;):
+;   segmen: <label>   baris ini awal penanda Q1, Q2, ... di garis waktu video
+;   kutipan <n>       baris ini kutipan kunci ke-n di slide 31 (teks/siapa/makna: src/data/kutipan.ts)
+Title: Wawancara keluarga ODGJ
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.709
+
+[Aegisub Project Garbage]
+Audio File: Timeline 1.mp4
+Video File: Timeline 1.mp4
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Narasumber,Montserrat SemiBold,54,&H00FFFFFF,&H94FFFFFF,&H940E0A0A,&H00000000,0,0,0,0,100,100,0,0,3,14,0,2,246,246,142,1
+Style: Pewawancara,Montserrat SemiBold,54,&H00F5C6CF,&H94F5C6CF,&H940E0A0A,&H00000000,0,0,0,0,100,100,0,0,3,14,0,2,246,246,142,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.17,0:00:03.94,Pewawancara,,0,0,0,segmen: Gejala awal,{\k102}Untuk {\k88}gejala {\k30}awal {\k38}Bapak {\k32}kena {\k34}demensia {\k18}itu {\k12}gimana {\k13}ya {\k10}Bu?
+Dialogue: 0,0:00:04.27,0:00:04.79,Narasumber,,0,0,0,,{\k52}Awalnya?
+Dialogue: 0,0:00:04.83,0:00:05.21,Pewawancara,,0,0,0,,{\k38}Iya.
+Dialogue: 0,0:00:07.26,0:00:08.98,Narasumber,,0,0,0,,{\k41}Kalau {\k42}nyuci {\k19}pakai {\k70}keset,
+Dialogue: 0,0:00:09.28,0:00:10.16,Narasumber,,0,0,0,,{\k30}awalnya {\k30}tuh {\k28}gitu.
+Dialogue: 0,0:00:11.20,0:00:12.20,Narasumber,,0,0,0,,{\k18}Jadi {\k21}kan {\k28}berantem {\k33}ya,
+Dialogue: 0,0:00:12.30,0:00:14.61,Narasumber,,0,0,0,kutipan 1,{\k81}tapi {\k18}saya {\k15}nggak {\k15}tahu {\k22}kalau {\k44}sakit {\k36}gitu.
+Dialogue: 0,0:00:17.00,0:00:18.27,Narasumber,,0,0,0,,{\k25}Itu {\k102}berlangsung
+Dialogue: 0,0:00:20.00,0:00:20.73,Narasumber,,0,0,0,,{\k23}enam {\k22}bulan, {\k28}yah.
+Dialogue: 0,0:00:20.93,0:00:21.37,Pewawancara,,0,0,0,,{\k19}Enam {\k25}bulan.
+Dialogue: 0,0:00:21.56,0:00:22.70,Narasumber,,0,0,0,,{\k13}Tapi {\k15}kalau {\k23}tahunnya {\k15}saya {\k32}lupa {\k16}deh.
+Dialogue: 0,0:00:23.57,0:00:27.68,Narasumber,,0,0,0,,{\k23}Anak {\k32}saya {\k115}masih {\k35}enam {\k105}SD, {\k68}sekarang {\k33}udah,
+Dialogue: 0,0:00:28.64,0:00:31.59,Narasumber,,0,0,0,,{\k22}yang {\k23}nomor {\k33}empat {\k21}itu {\k97}udah {\k29}kelas {\k21}tiga {\k49}SMA.
+Dialogue: 0,0:00:32.41,0:00:36.05,Narasumber,,0,0,0,,{\k20}Dulu {\k65}kejadiannya {\k17}dia {\k27}waktu {\k21}masih {\k35}SD {\k19}kelas {\k104}enam, {\k15}mau {\k41}ujian.
+Dialogue: 0,0:00:36.79,0:00:40.03,Narasumber,,0,0,0,,{\k53}Kok {\k20}itu {\k29}yah, {\k23}nyuci {\k39}pakai {\k46}keset, {\k22}kan {\k13}itu {\k12}ada {\k41}daleman {\k26}ya.
+Dialogue: 0,0:00:40.87,0:00:42.33,Narasumber,,0,0,0,,{\k29}Dan {\k14}itu {\k30}berlangsung {\k35}enam {\k38}bulan,
+Dialogue: 0,0:00:43.26,0:00:47.67,Narasumber,,0,0,0,,{\k21}nggak {\k70}berubah-rubah, {\k25}saya {\k31}bawa {\k159}ke {\k50}Puskesmas {\k85}Susukan,
+Dialogue: 0,0:00:47.93,0:00:51.64,Narasumber,,0,0,0,,{\k256}karena {\k50}BPJS-nya {\k19}di {\k46}situ.
+Dialogue: 0,0:00:53.26,0:00:56.84,Narasumber,,0,0,0,,{\k56}Ketemulah {\k65}sama {\k47}psikolog {\k86}yah, {\k13}ada {\k55}psikolog {\k11}di {\k25}sana.
+Dialogue: 0,0:00:57.83,0:01:00.51,Narasumber,,0,0,0,,{\k58}Dites {\k38}satu {\k48}jam {\k54}lebih, {\k24}satu {\k29}jam-an {\k17}lah.
+Dialogue: 0,0:01:01.67,0:01:02.94,Narasumber,,0,0,0,,{\k14}Satu {\k25}jam {\k27}lebih {\k16}saya {\k45}dampingin,
+Dialogue: 0,0:01:04.17,0:01:05.80,Narasumber,,0,0,0,,{\k12}itu {\k26}berapa {\k59}lembar {\k30}pertanyaan {\k36}gitu.
+Dialogue: 0,0:01:07.43,0:01:08.40,Narasumber,,0,0,0,,{\k17}Kita {\k30}suruh {\k50}nunggu,
+Dialogue: 0,0:01:10.40,0:01:14.49,Narasumber,,0,0,0,,{\k39}langsung {\k12}deh {\k17}itu {\k32}keluar {\k202}hasilnya, {\k17}kena {\k90}demensia.
+Dialogue: 0,0:01:15.22,0:01:16.62,Narasumber,,0,0,0,,{\k20}Terus {\k77}yang {\k23}ini, {\k20}Dek,
+Dialogue: 0,0:01:16.64,0:01:17.81,Narasumber,,0,0,0,,{\k13}ini {\k12}kan {\k29}latar {\k63}belakangnya,
+Dialogue: 0,0:01:18.61,0:01:20.51,Narasumber,,0,0,0,,{\k21}beliau {\k34}ditipu {\k42}sekali {\k13}dua {\k46}ratus {\k34}juta,
+Dialogue: 0,0:01:20.54,0:01:22.05,Narasumber,,0,0,0,,{\k80}itu {\k20}belum {\k51}oleng.
+Dialogue: 0,0:01:24.57,0:01:25.98,Narasumber,,0,0,0,,{\k76}Bodong, {\k28}investasi {\k37}bodong.
+Dialogue: 0,0:01:26.55,0:01:29.22,Narasumber,,0,0,0,,{\k32}Ditipu {\k43}kedua {\k41}kali {\k24}uang {\k65}pensiun, {\k16}baru {\k46}oleng.
+Dialogue: 0,0:01:29.73,0:01:32.61,Narasumber,,0,0,0,,{\k16}Karena {\k29}anaknya {\k20}pada {\k133}nuntut {\k51}kuliah {\k39}gitu.
+Dialogue: 0,0:01:33.94,0:01:35.28,Narasumber,,0,0,0,,{\k15}"Papah {\k17}udah {\k53}janji {\k25}itu {\k24}kan,
+Dialogue: 0,0:01:35.39,0:01:37.57,Narasumber,,0,0,0,,{\k23}uang {\k18}buat {\k79}kuliah {\k47}kita-kita, {\k29}gitu {\k22}yah.
+Dialogue: 0,0:01:38.02,0:01:39.02,Narasumber,,0,0,0,,{\k18}Kok {\k39}ditipu {\k43}juga?"
+Dialogue: 0,0:01:39.05,0:01:40.82,Narasumber,,0,0,0,,{\k7}Di {\k16}situ {\k12}kayaknya {\k31}mungkin {\k32}banyak {\k25}pikiran {\k12}atau {\k42}gimana.
+Dialogue: 0,0:01:41.83,0:01:45.25,Pewawancara,,0,0,0,segmen: Komunikasi,{\k62}Kalau {\k51}misal {\k17}Ibu {\k36}ada {\k90}kayak {\k86}kendala
+Dialogue: 0,0:01:45.63,0:01:46.83,Pewawancara,,0,0,0,,{\k53}komunikasi {\k28}nggak {\k24}sama {\k15}Bapak?
+Dialogue: 0,0:01:46.95,0:01:47.53,Pewawancara,,0,0,0,,{\k21}Ya, {\k37}iya.
+Dialogue: 0,0:01:50.19,0:01:51.99,Narasumber,,0,0,0,,{\k27}Enam {\k26}bulan {\k60}pertama {\k29}ada {\k38}keanehannya,
+Dialogue: 0,0:01:52.01,0:01:53.72,Narasumber,,0,0,0,,{\k65}itu {\k45}komunikasi {\k20}masih {\k41}bisa.
+Dialogue: 0,0:01:54.55,0:01:56.66,Narasumber,,0,0,0,,{\k23}Masih {\k62}ngomong {\k16}gitu, {\k21}masih {\k39}bisa {\k50}ngomongnya.
+Dialogue: 0,0:01:57.79,0:01:59.01,Narasumber,,0,0,0,,{\k15}Cuman {\k12}udah {\k13}mulai {\k17}nggak {\k40}nyambung {\k25}yah.
+Dialogue: 0,0:01:59.70,0:02:04.66,Narasumber,,0,0,0,,{\k357}Terus, {\k27}tahun {\k26}kedua {\k31}setelah {\k34}pensiun {\k21}itu,
+Dialogue: 0,0:02:04.68,0:02:07.55,Narasumber,,0,0,0,,{\k106}baru {\k62}ceritanya {\k31}cuma {\k45}kasih {\k43}simbol,
+Dialogue: 0,0:02:07.80,0:02:09.22,Narasumber,,0,0,0,,{\k48}"Heh, {\k43}heh," {\k51}gitu.
+Dialogue: 0,0:02:10.17,0:02:12.09,Pewawancara,,0,0,0,segmen: Obat,{\k43}Kalau {\k49}misal {\k20}ini {\k46}ada {\k34}obat
+Dialogue: 0,0:02:12.12,0:02:15.14,Pewawancara,,0,0,0,,{\k25}yang {\k61}sering {\k75}dikonsumsi {\k79}nggak, {\k28}rutin {\k34}gitu?
+Dialogue: 0,0:02:15.25,0:02:17.04,Narasumber,,0,0,0,,{\k108}Kalo {\k38}obat {\k33}itu,
+Dialogue: 0,0:02:17.07,0:02:19.86,Narasumber,,0,0,0,,{\k33}awal-awal {\k38}dari {\k64}Puskesmas {\k67}itu {\k17}kita {\k13}kan {\k47}dirujuk.
+Dialogue: 0,0:02:20.55,0:02:24.05,Narasumber,,0,0,0,,{\k16}"Bu, {\k16}di {\k22}sini {\k19}tuh {\k158}alatnya {\k32}nggak {\k34}ada," {\k53}gitu.
+Dialogue: 0,0:02:24.73,0:02:25.90,Narasumber,,0,0,0,,{\k54}Dokternya {\k63}juga,
+Dialogue: 0,0:02:26.38,0:02:28.73,Narasumber,,0,0,0,kutipan 2,{\k26}"Saya {\k31}cuma {\k35}psikolog {\k23}bukan {\k46}dokter," {\k36}bilang {\k38}gitu.
+Dialogue: 0,0:02:29.19,0:02:31.04,Narasumber,,0,0,0,,{\k42}Akhirnya {\k49}dirujuk {\k21}ke {\k73}Kesdam.
+Dialogue: 0,0:02:32.43,0:02:36.00,Narasumber,,0,0,0,,{\k13}Di {\k28}sana {\k36}dikasih {\k35}obat {\k137}tapi {\k40}minum {\k22}sekali {\k16}masih {\k30}mau,
+Dialogue: 0,0:02:36.42,0:02:37.98,Narasumber,,0,0,0,,{\k25}udah {\k30}kedua {\k17}kali {\k54}dibuang, {\k30}katanya,
+Dialogue: 0,0:02:38.66,0:02:39.93,Narasumber,,0,0,0,kutipan 3,{\k24}"Saya {\k22}tuh {\k54}sehat," {\k27}gitu,
+Dialogue: 0,0:02:39.95,0:02:40.93,Narasumber,,0,0,0,,{\k25}"ngapain {\k25}minum {\k48}obat?"
+Dialogue: 0,0:02:42.08,0:02:43.93,Pewawancara,,0,0,0,segmen: Kendala mendampingi,{\k35}Kalau {\k39}kendala {\k34}atau {\k77}kesulitan
+Dialogue: 0,0:02:43.95,0:02:46.80,Pewawancara,,0,0,0,,{\k26}yang {\k32}dihadapi {\k70}selama {\k61}mendampingi {\k51}pasien, {\k22}gimana, {\k23}Bu?
+Dialogue: 0,0:02:49.08,0:02:53.57,Narasumber,,0,0,0,,{\k153}Itu, {\k24}saya {\k50}asal {\k29}jemur {\k59}baju {\k17}belum {\k34}kering {\k33}diangkat {\k50}mulu.
+Dialogue: 0,0:02:54.06,0:02:56.37,Narasumber,,0,0,0,,{\k23}Saya {\k54}gembok {\k25}ya {\k40}kan, {\k17}saya {\k18}beli {\k37}gembok {\k17}tuh,
+Dialogue: 0,0:02:56.91,0:02:58.59,Narasumber,,0,0,0,,{\k31}gemboknya {\k28}tuh {\k109}dijebol.
+Dialogue: 0,0:02:59.60,0:03:01.47,Narasumber,,0,0,0,,{\k29}Berarti {\k36}harus {\k29}masang {\k46}empat {\k47}gembok,
+Dialogue: 0,0:03:01.85,0:03:06.04,Narasumber,,0,0,0,,{\k40}karena {\k68}kan {\k19}nggak {\k28}tahu {\k51}tenaganya {\k21}dari {\k34}mana {\k14}tuh {\k76}ya, {\k68}dijebol.
+Dialogue: 0,0:03:06.74,0:03:08.96,Narasumber,,0,0,0,,{\k18}Jadi {\k23}dia {\k18}bisa {\k39}ngangkat {\k31}lagi {\k33}cucian {\k38}basah {\k22}tuh.
+Dialogue: 0,0:03:09.84,0:03:12.45,Narasumber,,0,0,0,,{\k28}Anak {\k24}saya {\k112}yang {\k43}protes {\k54}semua,
+Dialogue: 0,0:03:13.05,0:03:14.43,Narasumber,,0,0,0,kutipan 4,{\k29}"Mah, {\k12}aku {\k16}nggak {\k22}mau {\k7}di {\k20}rumah {\k32}deh,
+Dialogue: 0,0:03:14.59,0:03:16.22,Narasumber,,0,0,0,,{\k36}aku {\k42}kuliahnya {\k28}mukim {\k57}aja,
+Dialogue: 0,0:03:16.75,0:03:18.14,Narasumber,,0,0,0,,{\k34}terserah {\k17}Mama {\k23}deh {\k15}di {\k30}mana {\k20}kek,
+Dialogue: 0,0:03:18.16,0:03:20.04,Narasumber,,0,0,0,,{\k19}yang {\k21}penting {\k23}aku {\k20}nggak {\k15}di {\k57}rumah," {\k33}gitu.

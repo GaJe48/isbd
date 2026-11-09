@@ -58,6 +58,20 @@ export interface Sub {
   w: [number, string][];
 }
 
+/** Gaya subtitle satu pembicara, diambil dari Style di "Timeline 1.ass" (warna CSS). */
+export interface SubStyle {
+  /** warna kata yang sudah diucapkan (PrimaryColour) */
+  on: string;
+  /** warna kata yang belum diucapkan (SecondaryColour, tanpa opasitas) dan opasitasnya */
+  off: string;
+  offA: number;
+  /** kotak latar (OutlineColour kalau BorderStyle 3, selain itu transparan) */
+  box: string;
+  /** ukuran huruf di layar 1920x1080 (px CSS) */
+  px: number;
+  italic: boolean;
+}
+
 export interface Segment {
   t: number;
   label: string;

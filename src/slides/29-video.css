@@ -14,10 +14,10 @@
 .s29 .shade{position:absolute;left:0;right:0;bottom:0;height:420px;background:linear-gradient(transparent,rgba(0,0,0,.72));pointer-events:none;opacity:0;transition:opacity .4s}
 .s29.ui .shade,.s29:has(.ctl:hover) .shade{opacity:1!important}
 .s29 .subs{position:absolute;left:220px;right:220px;bottom:130px;text-align:center;pointer-events:none}
-.s29 .sl{display:inline-block;max-width:100%;font:600 44px/1.42 var(--body);text-shadow:0 2px 10px rgba(0,0,0,.8),0 1px 3px rgba(0,0,0,.9);background:rgba(10,10,14,.42);padding:10px 26px 12px;border-radius:16px;backdrop-filter:blur(6px)}
-.s29 .sl .w{opacity:.42;transition:opacity .14s,color .14s}
-.s29 .sl .w.on{opacity:1}
-.s29 .sl.P{font-style:italic;color:var(--lav);font-weight:500}
+/* warna, kotak, ukuran, italic: dari Style di "Timeline 1.ass" (inline style, lihat 29-video.ts) */
+.s29 .sl{display:inline-block;max-width:100%;font:600 44px/1.42 var(--body);color:var(--on);text-shadow:0 2px 10px rgba(0,0,0,.8),0 1px 3px rgba(0,0,0,.9);padding:10px 26px 12px;border-radius:16px;backdrop-filter:blur(6px)}
+.s29 .sl .w{color:var(--off);opacity:var(--off-a);transition:opacity .14s,color .14s}
+.s29 .sl .w.on{color:var(--on);opacity:1}
 .s29 .ctl{position:absolute;left:90px;right:90px;bottom:42px;height:56px;opacity:0;transition:opacity .4s}
 .s29.ui .ctl,.s29 .ctl:hover{opacity:1!important}
 .s29 .track{position:absolute;left:0;right:0;top:10px;height:6px;border-radius:6px;background:rgba(255,255,255,.22);cursor:pointer}
