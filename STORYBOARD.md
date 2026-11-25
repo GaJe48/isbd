@@ -165,7 +165,7 @@ Estimasi total: **±22–25 menit** (termasuk video 3:20), 41 slide.
 
 #### S09 · Makna di Balik Istilah — Meme "No / Yes" (revisi v2)
 
-Memakai template `meme-no-yes.png` (2 baris: kiri kolom teks, kanan reaksi). Baris atas reaksi jijik/menolak, baris bawah reaksi kagum/setuju. Meme ini memecah suasana setelah slide-slide definisi, dan yang ditertawakan adalah **kata "orang gila"**, bukan orangnya.
+Memakai template `meme-no-yes-ori.jpg` (2 baris: kiri reaksi, kanan kolom teks). Baris atas reaksi jijik/menolak, baris bawah reaksi kagum/setuju. Meme ini memecah suasana setelah slide-slide definisi, dan yang ditertawakan adalah **kata "orang gila"**, bukan orangnya.
 
 ```
 ┌──────────────────────────────────────────────────────┐
@@ -180,7 +180,7 @@ Memakai template `meme-no-yes.png` (2 baris: kiri kolom teks, kanan reaksi). Bar
 ```
 
 **Penyusunan aset:**
-- Dua panel reaksi (kanan atas dan kanan bawah) dipotong dari `meme-no-yes.png`. Grid 2×2 disusun ulang di HTML, sehingga teks kiri memakai font presentasi (Archivo/Montserrat) dan bisa dianimasikan.
+- Dua panel reaksi (kiri atas dan kiri bawah) diambil dari `meme-no-yes-ori.jpg`. Grid 2×2 disusun ulang di HTML, sehingga teks kanan memakai font presentasi (Archivo/Atkinson Hyperlegible Next) dan bisa dianimasikan.
 - Meme ditampilkan sebagai **kartu putih** di atas latar charcoal, sedikit miring (±2°) dengan bayangan lembut, seperti stiker yang ditempel. Format meme tetap dikenali, tetapi menyatu dengan gaya presentasi.
 
 **Animasi:**

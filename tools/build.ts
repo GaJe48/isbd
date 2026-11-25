@@ -17,7 +17,7 @@ export async function build(dev: boolean) {
     minify: !dev,
     sourcemap: dev ? 'linked' : 'none',
     // font & gambar di assets/ dirujuk apa adanya dari CSS, tidak disalin
-    external: ['*.woff2', '*.png'],
+    external: ['*.woff2', '*.png', '*.jpg'],
     define: { __DEV__: String(dev) },
   });
   if (!r.success) {

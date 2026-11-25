@@ -12,11 +12,11 @@ export default defineSlide({
       <p class="sub pre">Kata yang kita pilih untuk menyebut seseorang ikut menentukan cara kita memperlakukannya.</p></div>
     <div class="glow"></div>
     <div class="meme pre"><div class="grid">
+      <div class="face no"></div>
       <div class="cellT c1"><div class="og pre">ORANG<br>GILA</div><div class="og2 pre">sinting · gendeng</div>
         <svg class="stamp pre" viewBox="0 0 250 250"><path d="M45 45 L205 205"/><path d="M205 45 L45 205"/></svg></div>
-      <div class="face no"></div>
-      <div class="cellT c2"><div class="yes1 pre">ODGJ</div><div class="yes2 pre">Orang Dengan Gangguan Jiwa</div></div>
       <div class="face yes" style="position:relative"><div class="sparkle pre" style="left:30px;top:40px">${SPK}</div><div class="sparkle pre" style="right:24px;top:90px;width:34px;height:34px">${SPK}</div><div class="sparkle pre" style="left:150px;bottom:30px;width:28px;height:28px">${SPK}</div></div>
+      <div class="cellT c2"><div class="yes1 pre">ODGJ</div><div class="yes2 pre">Orang Dengan Gangguan Jiwa</div></div>
       <div class="gl v"></div><div class="gl h"></div>
     </div></div>
     <div class="exp">
@@ -39,7 +39,7 @@ export default defineSlide({
     (el, tl) => {
       tl.fromTo($('.og', el), { autoAlpha: 0, scale: .7 }, { autoAlpha: 1, scale: 1, duration: .6, ease: 'back.out(2)' });
       FX.fade(tl, $('.og2', el), .3);
-      tl.fromTo($('.face.no', el), { opacity: 0, x: 80 }, { opacity: 1, x: 0, duration: .5, ease: 'power3.out' }, .2);
+      tl.fromTo($('.face.no', el), { opacity: 0, x: -80 }, { opacity: 1, x: 0, duration: .5, ease: 'power3.out' }, .2);
       tl.to($('.face.no', el), { keyframes: { x: [0, -14, 14, -12, 12, -6, 0] }, duration: .7, ease: 'none' }, .75);
       tl.fromTo($('.stamp', el), { autoAlpha: 0, scale: 2.8, rotation: -25 }, { autoAlpha: 1, scale: 1, rotation: -8, duration: .32, ease: 'power4.in' }, 1.35);
       tl.to($('.meme', el), { keyframes: { x: [0, 10, -8, 5, 0], y: [0, 6, -4, 2, 0] }, duration: .3, ease: 'none' }, 1.67);
@@ -55,8 +55,8 @@ export default defineSlide({
     },
     (el, tl) => {
       tl.to($('.ttl', el), { autoAlpha: 0, y: -40, duration: .6, ease: 'power2.in' });
-      tl.to($('.meme', el), { x: -900, y: 0, scale: .78, rotation: -2, duration: 1.3, ease: 'expo.inOut' }, .1);
-      tl.to($('.glow', el), { x: -900, scale: .8, duration: 1.3, ease: 'expo.inOut' }, .1);
+      tl.to($('.meme', el), { x: -900, y: -40, scale: .76, rotation: -2, duration: 1.3, ease: 'expo.inOut' }, .1);
+      tl.to($('.glow', el), { x: -900, y: -40, scale: .8, duration: 1.3, ease: 'expo.inOut' }, .1);
       FX.up(tl, $$('.exp .card', el), .9, { stagger: .2 });
     },
     (el, tl) => {
