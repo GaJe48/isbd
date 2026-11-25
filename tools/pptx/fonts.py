@@ -1,16 +1,17 @@
 """Font tertanam untuk PPTX, dengan cara yang sama seperti ekspor PPTX Canva.
 
 Membaca out/pptx/dump.json dan mengumpulkan varian font yang dipakai teks (font, lebar, berat, miring).
-Setiap varian jadi keluarga font tersendiri bergaya "Regular" berat 400, misalnya "Montserrat SemiBold Italic"
-atau "Archivo W125 Black". Dengan begitu PowerPoint tidak perlu mencocokkan tebal/miring, dan run teks
+Setiap varian jadi keluarga font tersendiri bergaya "Regular" berat 400, misalnya
+"Atkinson Next SemiBold Italic" atau "Archivo W100 Black". Nama keluarga paling panjang 31 huruf: Windows (GDI)
+memotong nama font yang lebih panjang, sehingga PowerPoint tidak menemukan font tertanamnya. Dengan begitu PowerPoint tidak perlu mencocokkan tebal/miring, dan run teks
 cukup memakai b="0" i="0".
-Archivo diambil dari font variabel web (diinstans per lebar+berat). Montserrat memakai woff2 statis dengan
-berat terdekat, mengikuti aturan pencocokan CSS.
+Keduanya diambil dari font variabel web: Archivo diinstans per lebar+berat, Atkinson Hyperlegible Next per berat
+(file tegak/miring terpisah).
 
 Keluaran di out/pptx/fonts/:
   <Nama>.ttf      font biasa, bisa di-install kalau perlu
   <Nama>.fntdata  EOT 2.2 tanpa kompresi, ditanam build.ts (format yang sama dengan Canva)
-  fonts.json      { "keys": { "Archivo|125|900|0": "Archivo W125 Black", ... }, "fonts": [ { family, file, panose } ] }
+  fonts.json      { "keys": { "Archivo|100|900|0": "Archivo W100 Black", ... }, "fonts": [ { family, file, panose } ] }
 Catatan: ekspor gambar PowerPoint lewat COM (Slide.Export) mengabaikan font tertanam, tapi ekspor PDF dan
 jendela PowerPoint memakainya. Karena itu render.ps1 merender lewat PDF.
 Pakai: uv run --no-project --with fonttools --with brotli --with skia-pathops python tools/pptx/fonts.py"""
@@ -33,31 +34,25 @@ def num(x: float) -> str:
     return f"{round(x, 2):g}"
 
 
-def nearest(have: list[int], w: int) -> int:
-    """berat terdekat yang tersedia, aturan pencocokan font CSS"""
-    if w in have:
-        return w
-    up, down = sorted(x for x in have if x > w), sorted((x for x in have if x < w), reverse=True)
-    if 400 <= w <= 500:
-        return ([x for x in up if x <= 500] + down + up)[0]
-    return (down + up if w < 400 else up + down)[0]
+def instance(file: str, axes: dict):
+    def load():
+        f = instantiateVariableFont(TTFont(SRC / file), axes)
+        removeOverlaps(f)  # kontur tumpang-tindih khas font variabel
+        return f
+    return load
 
 
 def variant(font: str, stretch: float, weight: int, italic: bool):
     """-> (nama keluarga, fungsi pemuat TTFont)"""
-    if font == "Archivo":
+    if font == "Archivo":  # hanya versi tegak; teks miring Archivo dimiringkan browser
         wd, wg = max(62, min(125, stretch)), max(100, min(900, weight))
-        def load():
-            f = instantiateVariableFont(TTFont(SRC / "archivo-latin-wdth-normal.woff2"), {"wdth": wd, "wght": wg})
-            removeOverlaps(f)  # kontur tumpang-tindih khas font variabel
-            return f
-        return f"Archivo W{num(wd)} {WEIGHT[wg] or 'Regular'}", load
-    files = {int(p.stem.split("-")[2]): p for p in SRC.glob(f"{font.lower()}-latin-*-{'italic' if italic else 'normal'}.woff2")}
-    if not files:  # tidak ada versi miring: browser memiringkan sendiri, di sini pakai yang tegak
-        files, italic = {int(p.stem.split("-")[2]): p for p in SRC.glob(f"{font.lower()}-latin-*-normal.woff2")}, False
-    w = nearest(list(files), weight)
-    fam = " ".join(x for x in [font, WEIGHT[w], "Italic" if italic else ""] if x)
-    return fam, lambda: TTFont(files[w])
+        return f"Archivo W{num(wd)} {WEIGHT[wg] or 'Regular'}", instance("archivo-latin-wdth-normal.woff2", {"wdth": wd, "wght": wg})
+    if font == "Atkinson Hyperlegible Next":
+        wg = max(200, min(800, round(weight / 100) * 100))
+        fam = " ".join(x for x in ["Atkinson Next", WEIGHT[wg], "Italic" if italic else ""] if x)
+        file = f"atkinson-hyperlegible-next-latin-wght-{'italic' if italic else 'normal'}.woff2"
+        return fam, instance(file, {"wght": wg})
+    raise SystemExit(f"font {font!r} belum dikenal fonts.py")
 
 
 def rename(f: TTFont, fam: str):
@@ -108,6 +103,7 @@ for slide in dump["slides"]:
                 key = f"{r['font']}|{num(r['stretch'])}|{r['weight']}|{int(r['italic'])}"
                 if key not in keys:
                     fam, load = variant(r["font"], r["stretch"], r["weight"], r["italic"])
+                    assert len(fam) <= 31, f"nama font {fam!r} lebih dari 31 huruf"
                     keys[key] = fam
                     loaders.setdefault(fam, load)
 

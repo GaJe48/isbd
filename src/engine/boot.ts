@@ -21,7 +21,8 @@ function fit(stage: HTMLElement) {
   DECK.scale = s;
 }
 
-const FONTS = ['900 100px Archivo', '400 20px Montserrat', '600 20px Montserrat', '700 20px Montserrat', '800 20px Montserrat', 'italic 400 20px Montserrat', 'italic 600 20px Montserrat'];
+const BODY = "'Atkinson Hyperlegible Next'";
+const FONTS = ['900 100px Archivo', `400 20px ${BODY}`, `italic 400 20px ${BODY}`];
 
 export async function boot(slides: SlideDef[]) {
   // tunggu font: svgText mengukur huruf

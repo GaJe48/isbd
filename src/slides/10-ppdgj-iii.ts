@@ -10,8 +10,8 @@ export default defineSlide({
   orbs: [[1620, 200, 1000, '#7A6BB0', .45], [280, 920, 1000, '#2F6FD6', .45]],
   html: `${HD('02', 'Pengertian · PPDGJ-III (1993) mengikuti ICD-10 WHO', '10 kelompok <span class="ol">gangguan jiwa</span>')}
     <div class="tiles">${PP.map(p => `<div class="tile" data-noclick><div class="ring"></div>${p[4] ? `<span class="tag">${p[4]}</span>` : ''}<div class="c">${p[0]}</div><div class="r">${p[1]}</div><div class="g">${p[2]}</div><div class="e">${p[3]}</div></div>`).join('')}</div>
-    <div class="msg pre">Tidak semua ODGJ itu <span class="ol thin" style="font-family:var(--disp);font-stretch:125%;font-weight:900">“orang gila”</span> di jalan.
-      <p class="small" style="margin-top:10px;font-size:22px">Orang dengan depresi atau gangguan cemas juga termasuk ODGJ, dan banyak yang tetap bisa bekerja serta kuliah bila ditangani.</p></div>`,
+    <div class="msg pre">Tidak semua ODGJ itu <span class="ol thin" style="font-family:var(--disp);font-stretch:100%;font-weight:900">“orang gila”</span> di jalan.
+      <p class="small" style="margin-top:10px;font-size:26px">Orang dengan depresi atau gangguan cemas juga termasuk ODGJ, dan banyak yang tetap bisa bekerja serta kuliah bila ditangani.</p></div>`,
   intro(el, tl) {
     hdIn(el, tl);
     tl.from($$('.tile', el), { autoAlpha: 0, y: 60, rotationX: -50, scale: .9, transformPerspective: 900, duration: .9, ease: 'expo.out', stagger: { grid: [2, 5], from: 'start', amount: .9 } }, .4);

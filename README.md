@@ -22,6 +22,16 @@ bun run check    # cek tipe TypeScript
 
 Build memakai format IIFE karena modul ES tidak bisa dimuat dari `file://`.
 
+## Tipografi
+
+Dibuat supaya terbaca dari jauh saat diproyeksikan. Panggung 1920 px, jadi 1pt PowerPoint = 2 px.
+
+- Judul: Archivo, lebar normal (`font-stretch:100%`), tebal 900.
+- Isi: [Atkinson Hyperlegible Next](https://www.brailleinstitute.org/freefont/) (OFL, di `assets/fonts/`). Huruf yang
+  mirip (I l 1, O 0) dibuat berbeda.
+- Teks paling kecil 22 px (label, sumber), isi kartu 24 px ke atas. Teks redup minimal 75% opasitas.
+- Teks outline hanya untuk judul atau hiasan besar, bukan kalimat yang perlu dibaca.
+
 ## Subtitle video wawancara
 
 Sumbernya `Timeline 1.ass`, diedit dengan [Aegisub](https://aegisub.org). Video ikut terbuka otomatis kalau
@@ -34,7 +44,7 @@ Sumbernya `Timeline 1.ass`, diedit dengan [Aegisub](https://aegisub.org). Video 
   `kutipan <n>` untuk kutipan kunci ke-n di slide 31. Teks rapi kutipannya ada di `src/data/kutipan.ts`.
 
 `bun run subs` memberi peringatan kalau ada baris yang tumpang tindih, terlalu panjang, atau kutipan yang belum ditandai.
-Preview di Aegisub memakai font Montserrat SemiBold kalau terpasang (TTF ada di `out/pptx/fonts/`).
+Preview di Aegisub memakai font "Atkinson Next SemiBold" kalau terpasang (TTF dibuat `bun run pptx` di `out/pptx/fonts/`).
 
 File ini satu-satunya sumber subtitle, termasuk gayanya. Ubah Style di Aegisub (*Subtitle → Styles Manager*):
 
@@ -43,14 +53,14 @@ File ini satu-satunya sumber subtitle, termasuk gayanya. Ubah Style di Aegisub (
 | warna utama / sekunder (kata sudah / belum diucapkan, termasuk transparansinya) | ✓ | ✓ |
 | warna garis tepi + BorderStyle 3 (kotak latar) | ✓ | ✓ |
 | ukuran huruf, italic | ✓ | ✓ |
-| font, margin, posisi | – (tetap Montserrat 600, posisi tata letak slide) | ✓ |
+| font, margin, posisi | – (tetap Atkinson Hyperlegible Next 600, posisi tata letak slide) | ✓ |
 
 Setelah mengubah: `bun run subs` (web) dan `bun run pptx:video` (video PPTX, membaca `.ass` langsung).
 
 ## Versi PowerPoint
 
 Hasil: `out/pptx/presentasi.pptx`. Satu slide PowerPoint per langkah klik, tanpa animasi, semua teks bisa diedit,
-font Archivo + Montserrat ditanam di dalam file (tidak perlu di-install), video wawancara dengan subtitle tertanam.
+font Archivo + Atkinson Hyperlegible Next ditanam di dalam file (tidak perlu di-install), video wawancara dengan subtitle tertanam.
 
 ```bash
 bun run pptx:video   # sekali saja (atau setelah subtitle berubah): Timeline 1.mp4 + Timeline 1.ass -> out/pptx/wawancara.mp4

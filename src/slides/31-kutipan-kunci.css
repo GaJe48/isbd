@@ -2,7 +2,7 @@
 .s31 .qwrap{position:absolute;left:260px;right:200px;top:340px}
 .s31 .qt{font:700 76px/1.18 var(--body);letter-spacing:-.01em}
 .s31 .qt .w{display:inline-block}
-.s31 .who{margin-top:40px;font:700 22px var(--body);letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.s31 .who{margin-top:40px;font:700 26px var(--body);letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.75)}
 .s31 .mean{margin-top:22px;display:inline-flex;align-items:center;gap:16px;font:600 30px var(--body)}
 .s31 .mean i{width:46px;height:3px;background:var(--warm)}
-.s31 .ctr{position:absolute;right:140px;top:130px;font:900 26px var(--disp);font-stretch:125%;color:rgba(255,255,255,.4)}
+.s31 .ctr{position:absolute;right:140px;top:130px;font:900 26px var(--disp);font-stretch:100%;color:rgba(255,255,255,.75)}

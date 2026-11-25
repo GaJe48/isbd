@@ -8,7 +8,7 @@ export default defineSlide({
   orbs: [[1500, 330, 1000, '#7A6BB0', .5], [380, 880, 900, '#D9283F', .3]],
   html: `${HD('03', 'Data & fakta · Kemenkes 2026', 'Kesenjangan <span class="ol">tenaga ahli</span>')}
     <div class="bars">
-      <p class="small" style="margin-bottom:10px;font-size:21px">Jumlah penduduk yang dilayani oleh <b style="color:#fff">1 psikiater</b></p>
+      <p class="small" style="margin-bottom:10px;font-size:26px">Jumlah penduduk yang dilayani oleh <b style="color:#fff">1 psikiater</b></p>
       <div class="br r1 pre"><span class="who">WHO</span><span class="ratio">1 : 30.000</span><span class="bar" style="width:180px;background:#A8DDA0"></span></div>
       <div class="br r2 pre"><span class="who">RI</span><span class="ratio">1 : <span class="c">30.000</span></span><span class="bar" style="width:1080px;background:linear-gradient(90deg,#7A6BB0,#D9283F)"></span></div>
     </div>

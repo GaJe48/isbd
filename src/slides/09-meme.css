@@ -11,17 +11,17 @@
 .s09 .gl{position:absolute;background:#111}
 .s09 .gl.v{left:50%;top:0;bottom:0;width:7px;margin-left:-3.5px;transform-origin:top}
 .s09 .gl.h{left:0;right:0;top:304px;height:7px;margin-top:-3.5px;transform-origin:left}
-.s09 .og{font:900 64px/.95 var(--disp);font-stretch:125%;color:transparent;-webkit-text-stroke:2px #111}
-.s09 .og2{margin-top:16px;font:italic 600 22px var(--body);color:#777}
-.s09 .yes1{font:900 104px/1 var(--disp);font-stretch:125%;color:#111}
-.s09 .yes2{margin-top:14px;font:700 16px var(--body);letter-spacing:.2em;text-transform:uppercase;color:#333}
+.s09 .og{font:900 64px/.95 var(--disp);font-stretch:100%;color:transparent;-webkit-text-stroke:2px #111}
+.s09 .og2{margin-top:16px;font:italic 600 26px var(--body);color:#777}
+.s09 .yes1{font:900 104px/1 var(--disp);font-stretch:100%;color:#111}
+.s09 .yes2{margin-top:14px;font:700 22px var(--body);letter-spacing:.2em;text-transform:uppercase;color:#333}
 .s09 .stamp{position:absolute;left:50%;top:50%;width:250px;height:250px;margin:-125px}
 .s09 .stamp path{stroke:var(--red);stroke-width:26;stroke-linecap:round;fill:none}
 .s09 .sparkle{position:absolute;width:46px;height:46px}
 .s09 .exp{position:absolute;left:880px;right:120px;top:190px;display:flex;flex-direction:column;gap:26px}
 .s09 .exp .card{padding:34px 40px}
 .s09 .exp .card h4{font-size:28px}
-.s09 .exp .card p{font-size:22px}
+.s09 .exp .card p{font-size:26px}
 .s09 .exp .card.yes{background:rgba(226,240,224,.9)}
 .s09 .final{position:absolute;left:880px;right:120px;top:800px}
 .s09 .final .disp{font-size:50px}

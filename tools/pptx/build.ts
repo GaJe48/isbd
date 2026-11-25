@@ -1,6 +1,6 @@
 /* out/pptx/dump.json (+ img/, fonts/, wawancara.mp4) -> out/pptx/presentasi.pptx, ditulis langsung sebagai XML PresentationML.
    Satu slide PowerPoint per langkah klik, tanpa animasi/transisi. Urutan lengkap: lihat "pptx" di package.json.
-   Semua teks tetap teks yang bisa diedit. Font (Archivo, Montserrat) ditanam seperti ekspor PPTX Canva:
+   Semua teks tetap teks yang bisa diedit. Font (Archivo, Atkinson Hyperlegible Next) ditanam seperti ekspor PPTX Canva:
    satu keluarga per varian, EOT tanpa kompresi, dibuat tools/pptx/fonts.py.
    Pakai: bun tools/pptx/build.ts [--reflow] [--in=dump.json] [--out=presentasi.pptx]
      --reflow    biarkan PowerPoint membungkus teks sendiri; default: putus baris persis seperti di browser (a:br) */
@@ -166,7 +166,7 @@ const REL = (items: [id: string, type: string, target: string][]) =>
 
 const THEME = `${XML}<a:theme xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" name="ODGJ"><a:themeElements>
 <a:clrScheme name="ODGJ"><a:dk1><a:srgbClr val="111111"/></a:dk1><a:lt1><a:srgbClr val="FFFFFF"/></a:lt1><a:dk2><a:srgbClr val="2B2B2D"/></a:dk2><a:lt2><a:srgbClr val="BDBDBD"/></a:lt2><a:accent1><a:srgbClr val="2F6FD6"/></a:accent1><a:accent2><a:srgbClr val="7A6BB0"/></a:accent2><a:accent3><a:srgbClr val="B85A9C"/></a:accent3><a:accent4><a:srgbClr val="D9283F"/></a:accent4><a:accent5><a:srgbClr val="F0A04B"/></a:accent5><a:accent6><a:srgbClr val="A8DDA0"/></a:accent6><a:hlink><a:srgbClr val="CFC6F5"/></a:hlink><a:folHlink><a:srgbClr val="B85A9C"/></a:folHlink></a:clrScheme>
-<a:fontScheme name="ODGJ"><a:majorFont><a:latin typeface="Montserrat ExtraBold"/><a:ea typeface=""/><a:cs typeface=""/></a:majorFont><a:minorFont><a:latin typeface="Montserrat"/><a:ea typeface=""/><a:cs typeface=""/></a:minorFont></a:fontScheme>
+<a:fontScheme name="ODGJ"><a:majorFont><a:latin typeface="Archivo W100 Black"/><a:ea typeface=""/><a:cs typeface=""/></a:majorFont><a:minorFont><a:latin typeface="Atkinson Next"/><a:ea typeface=""/><a:cs typeface=""/></a:minorFont></a:fontScheme>
 <a:fmtScheme name="ODGJ"><a:fillStyleLst><a:solidFill><a:schemeClr val="phClr"/></a:solidFill><a:solidFill><a:schemeClr val="phClr"/></a:solidFill><a:solidFill><a:schemeClr val="phClr"/></a:solidFill></a:fillStyleLst>
 <a:lnStyleLst><a:ln w="6350"><a:solidFill><a:schemeClr val="phClr"/></a:solidFill></a:ln><a:ln w="12700"><a:solidFill><a:schemeClr val="phClr"/></a:solidFill></a:ln><a:ln w="19050"><a:solidFill><a:schemeClr val="phClr"/></a:solidFill></a:ln></a:lnStyleLst>
 <a:effectStyleLst><a:effectStyle><a:effectLst/></a:effectStyle><a:effectStyle><a:effectLst/></a:effectStyle><a:effectStyle><a:effectLst/></a:effectStyle></a:effectStyleLst>

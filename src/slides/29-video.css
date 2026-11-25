@@ -24,7 +24,7 @@
 .s29 .track::before{content:"";position:absolute;left:0;right:0;top:-14px;bottom:-14px}
 .s29 .fillbar{position:absolute;left:0;top:0;bottom:0;width:0;border-radius:6px;background:var(--warm)}
 .s29 .mk{position:absolute;top:50%;width:16px;height:16px;margin:-8px;transform:rotate(45deg);background:#fff;border-radius:3px;cursor:pointer}
-.s29 .mkl{position:absolute;top:26px;font:700 15px var(--body);letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75);white-space:nowrap;transform:translateX(-8px)}
-.s29 .time{position:absolute;right:0;top:-20px;font:700 15px/1 var(--body);letter-spacing:.1em;font-variant-numeric:tabular-nums;color:rgba(255,255,255,.75)}
+.s29 .mkl{position:absolute;top:26px;font:700 22px var(--body);letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75);white-space:nowrap;transform:translateX(-8px)}
+.s29 .time{position:absolute;right:0;top:-20px;font:700 22px/1 var(--body);letter-spacing:.1em;font-variant-numeric:tabular-nums;color:rgba(255,255,255,.75)}
 .s29 .pz{position:absolute;left:50%;top:50%;width:150px;height:150px;margin:-75px;border-radius:50%;background:rgba(0,0,0,.45);display:grid;place-items:center;opacity:0;pointer-events:none}
 .s29 .blackout{position:absolute;inset:0;background:#000;opacity:0;pointer-events:none}

@@ -10,7 +10,7 @@ export default defineSlide({
   orbs: [[960, 480, 1200, '#7A6BB0', .5], [380, 920, 800, '#B85A9C', .4], [1600, 920, 800, '#F0A04B', .4]],
   html: `<div class="lbl"><div class="kicker pre"><b>09</b><span>Saran · keluarga & masyarakat perlu mengganti cara pandang</span></div></div>
     <div class="morph"><div class="mline disp from" style="font-size:70px">${spans(FROM)}</div><div class="mline disp to" style="font-size:70px">${spans(TO)}</div></div>
-    <p class="small pre cap" style="position:absolute;left:0;right:0;top:520px;text-align:center;font-size:22px">dari sesuatu yang disembunyikan, menjadi sesuatu yang ditangani bersama</p>
+    <p class="small pre cap" style="position:absolute;left:0;right:0;top:520px;text-align:center;font-size:26px">dari sesuatu yang disembunyikan, menjadi sesuatu yang ditangani bersama</p>
     <p class="gov pre">Pemerintah perlu <b>menambah tenaga dan layanan kesehatan jiwa</b> sampai ke desa.</p>`,
   init(el) {
     const S = $$('.from span', el), T = $$('.to span', el), used = new Set<number>();

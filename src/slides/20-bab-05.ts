@@ -11,7 +11,7 @@ export default defineSlide({
     <div class="body" style="left:1000px;top:280px">
       <div class="kicker pre"><b>05</b><span>Perspektif sosial budaya</span></div>
       <div class="q" style="margin-top:44px;font-size:62px">${quoteWords('Cara budaya memaknai gangguan jiwa menentukan cara masyarakat memperlakukannya.', 'jw ol')}</div>
-      <p class="small pre" style="margin-top:40px;font-size:22px">Inti kaitan ODGJ dengan ISBD: dari pengucilan sampai pemasungan.</p>
+      <p class="small pre" style="margin-top:40px;font-size:26px">Inti kaitan ODGJ dengan ISBD: dari pengucilan sampai pemasungan.</p>
     </div>`,
   init(el) { el._t = FX.svgText($('svg', el)); $$('svg text', el).forEach(t => t.style.stroke = 'rgba(255,255,255,.55)'); },
   intro(el, tl) {

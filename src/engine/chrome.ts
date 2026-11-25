@@ -29,13 +29,13 @@ export function openNotes(onKey: (e: KeyboardEvent) => void) {
   const d = notesWin.document;
   d.title = 'Catatan Pembicara — ODGJ';
   d.body.innerHTML = `<style>
-    body{margin:0;background:#18181a;color:#eee;font:18px/1.6 Montserrat,Segoe UI,sans-serif;padding:34px 40px}
+    body{margin:0;background:#18181a;color:#eee;font:18px/1.6 'Atkinson Hyperlegible Next',Segoe UI,sans-serif;padding:34px 40px}
     .top{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #333;padding-bottom:14px}
     h1{font-size:30px;margin:0} .clock{font:700 34px monospace;color:#F0A04B}
     .meta{color:#999;font-size:15px;letter-spacing:.12em;text-transform:uppercase;margin-top:10px}
     .notes{font-size:24px;line-height:1.6;margin-top:26px;white-space:pre-wrap}
     .next{margin-top:34px;padding:16px 20px;border-radius:12px;background:#232326;color:#aaa}
-    .next b{color:#fff} button{font:600 15px Montserrat,sans-serif;padding:10px 16px;margin-right:8px;border-radius:8px;border:0;background:#333;color:#fff;cursor:pointer}
+    .next b{color:#fff} button{font:600 15px 'Atkinson Hyperlegible Next',sans-serif;padding:10px 16px;margin-right:8px;border-radius:8px;border:0;background:#333;color:#fff;cursor:pointer}
   </style>
   <div class="top"><h1 id="t"></h1><div class="clock" id="c">00:00</div></div>
   <div class="meta" id="m"></div><div class="notes" id="n"></div><div class="next" id="x"></div>

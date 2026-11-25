@@ -13,7 +13,7 @@ export default defineSlide({
     <div class="signs" style="left:1080px">
       ${[['Sedih atau hampa', 'menetap hampir sepanjang hari'], ['Hilang minat', 'hal yang dulu disukai terasa hambar'], ['Mudah lelah', 'energi turun, aktivitas terganggu']].map((s, k) => `<div class="card dark pre"><div class="nd">${k + 1}</div><div><h4>${s[0]}</h4><p>${s[1]}</p></div></div>`).join('')}
     </div>
-    <p class="note lead pre" style="left:1080px;top:820px;font-size:25px">Depresi berat juga bisa disertai <b>psikosis</b>.</p>`,
+    <p class="note lead pre" style="left:1080px;top:820px;font-size:27px">Depresi berat juga bisa disertai <b>psikosis</b>.</p>`,
   intro(el, tl) {
     hdIn(el, tl);
     FX.up(tl, $('.big', el), .4);

@@ -21,8 +21,8 @@ Video File: Timeline 1.mp4
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Narasumber,Montserrat SemiBold,54,&H00FFFFFF,&H94FFFFFF,&H940E0A0A,&H00000000,0,0,0,0,100,100,0,0,3,14,0,2,246,246,142,1
-Style: Pewawancara,Montserrat SemiBold,54,&H00F5C6CF,&H94F5C6CF,&H940E0A0A,&H00000000,0,0,0,0,100,100,0,0,3,14,0,2,246,246,142,1
+Style: Narasumber,Atkinson Next SemiBold,57,&H00FFFFFF,&H94FFFFFF,&H940E0A0A,&H00000000,0,0,0,0,100,100,0,0,3,14,0,2,246,246,142,1
+Style: Pewawancara,Atkinson Next SemiBold,57,&H00F5C6CF,&H94F5C6CF,&H940E0A0A,&H00000000,0,0,0,0,100,100,0,0,3,14,0,2,246,246,142,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text

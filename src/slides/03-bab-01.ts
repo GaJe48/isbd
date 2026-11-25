@@ -10,7 +10,7 @@ export default defineSlide({
     <div class="body" style="left:1000px;top:300px">
       <div class="kicker pre"><b>01</b><span>Pendahuluan</span></div>
       <div class="q" style="margin-top:44px">${quoteWords('Tidak ada kesehatan tanpa kesehatan jiwa.', 'jw ol')}</div>
-      <p class="small pre" style="margin-top:40px;font-size:22px">“No health without mental health” — prinsip WHO</p>
+      <p class="small pre" style="margin-top:40px;font-size:26px">“No health without mental health” — prinsip WHO</p>
     </div>`,
   init(el) { el._t = FX.svgText($('svg', el)); $$('svg text', el).forEach(t => t.style.stroke = 'rgba(255,255,255,.55)'); },
   intro(el, tl) {

@@ -8,5 +8,5 @@
 .s11 .tree svg{position:absolute;inset:0;overflow:visible}
 .s11 .tree path{fill:none;stroke:url(#rootg);stroke-width:3}
 .s11 .node{position:absolute;white-space:nowrap}
-.s11 .node.root{font:900 44px/1 var(--disp);font-stretch:125%;padding:26px 34px;border-radius:999px;border:2px solid rgba(255,255,255,.6);background:rgba(43,43,45,.7)}
-.s11 .node.leaf{font:700 24px/1 var(--body);padding:16px 26px;border-radius:999px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.25)}
+.s11 .node.root{font:900 44px/1 var(--disp);font-stretch:100%;padding:26px 34px;border-radius:999px;border:2px solid rgba(255,255,255,.6);background:rgba(43,43,45,.7)}
+.s11 .node.leaf{font:700 27px/1 var(--body);padding:16px 26px;border-radius:999px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.25)}

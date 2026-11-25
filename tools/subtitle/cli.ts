@@ -10,11 +10,12 @@ const OUT = path.join(ROOT, 'src', 'data', 'subs.ts');
 const r = buildSubtitles(await Bun.file(ASS).text());
 const quotes = KUTIPAN.map((q, k) => ({ t: r.quoteTimes[k] ?? 0, ...q }));
 
-/* Style .ass -> CSS. Ukuran huruf libass = tinggi ascender+descender (~1,22 em untuk Montserrat), jadi px CSS = Fontsize / 1,22. */
+/* Style .ass -> CSS. Ukuran huruf libass = tinggi ascender+descender (1,30 em untuk Atkinson Hyperlegible Next),
+   jadi px CSS = Fontsize / 1,30. */
 const rgb = (c: string) => { const { r: R, g, b } = assColor(c); return `rgb(${R},${g},${b})`; };
 const css = (s: AssStyle) => ({
   on: rgb(s.primary), off: rgb(s.secondary), offA: assColor(s.secondary).a,
-  box: s.borderStyle === 3 ? cssColor(s.outline) : 'transparent', px: Math.round(s.size / 1.22), italic: s.italic,
+  box: s.borderStyle === 3 ? cssColor(s.outline) : 'transparent', px: Math.round(s.size / 1.3), italic: s.italic,
 });
 
 await Bun.write(OUT, `// Dibuat otomatis oleh tools/subtitle/cli.ts dari "Timeline 1.ass". Jangan diedit langsung: jalankan bun run subs.

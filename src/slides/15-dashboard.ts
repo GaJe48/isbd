@@ -11,7 +11,7 @@ export default defineSlide({
       <div class="card pre"><div class="v"><span class="c">0</span><small> / 1.000</small></div><p>rumah tangga punya anggota <b>bergejala psikosis/skizofrenia</b></p><div class="s">SKI 2023</div></div>
       <div class="card pre"><div class="v">±<span class="c">0</span><small> juta</small></div><p>perkiraan penderita <b>skizofrenia</b> di Indonesia</p><div class="s">PNPK Kemenkes 2025</div></div>
       <div class="card pre"><svg class="ring" viewBox="0 0 150 150"><circle cx="75" cy="75" r="64" stroke="rgba(17,17,17,.12)"/><circle class="arc" cx="75" cy="75" r="64" stroke="url(#gradBG)" stroke-linecap="round" transform="rotate(-90 75 75)" stroke-dasharray="402.1" stroke-dashoffset="402.1"/></svg><div class="v" style="margin-top:18px"><span class="c">0</span>%</div><p>pengidap psikosis/skizofrenia <b>sudah berobat</b></p><div class="s">SKI 2023</div></div>
-      <div class="card pre"><div class="v"><span class="c">0</span>%</div><p>prevalensi <b>depresi</b> (usia 15 tahun ke atas)</p><div class="young pre"><span class="tag">usia kita</span><span style="font:700 20px var(--body)">15–24 tahun</span><span class="v2">2%</span></div><div class="s">SKI 2023</div></div>
+      <div class="card pre"><div class="v"><span class="c">0</span>%</div><p>prevalensi <b>depresi</b> (usia 15 tahun ke atas)</p><div class="young pre"><span class="tag">usia kita</span><span style="font:700 24px var(--body)">15–24 tahun</span><span class="v2">2%</span></div><div class="s">SKI 2023</div></div>
     </div>
     <p class="src">Label “psikosis/skizofrenia” dipakai karena petugas survei hanya bisa menangkap gejala.</p>`,
   intro(el, tl) {
