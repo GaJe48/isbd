@@ -5,7 +5,7 @@ import './01-cover.css';
 
 /* ---------------- S01 · Cover ---------------- */
 export default defineSlide({
-  id: 's01', cls: 'cover', act: 0, title: 'Cover', hud: false,
+  id: 's01', cls: 'cover s01', act: 0, title: 'Cover', hud: false,
   bg: '#5b5b60',
   orbs: [[230, 380, 1600, '#A3A3A8', .95], [960, 620, 1250, '#D9283F', .9], [1720, 420, 1500, '#2F6FD6', .95], [1200, 980, 900, '#B85A9C', .55]],
   html: `<div class="black"></div><div class="dot"></div>
@@ -13,7 +13,8 @@ export default defineSlide({
     <div class="full pre">Orang Dengan Gangguan Jiwa</div>
     <div class="tag pre">Memandang manusia, bukan labelnya.</div>
     <div class="meta-l pre">${I.matkul}<br>${I.tahun}</div>
-    <div class="meta-r pre">Dipresentasikan oleh<b>${I.kelompok}</b>Dosen: ${I.dosen}</div>`,
+    <div class="meta-r pre">Dosen pengampu<b>${I.dosen}</b></div>
+    <div class="team pre"><div class="tk">${I.kelompok}</div><div class="row">${I.anggota.map(([n, nim]) => `<div><b>${n}</b><span>${nim}</span></div>`).join('')}</div></div>`,
   init(el) { el._t = FX.svgText($('svg', el)); },
   intro(el, tl) {
     const dot = $('.dot', el), black = $('.black', el);
@@ -27,6 +28,7 @@ export default defineSlide({
     FX.fade(tl, $('.tag', el), '-=1', { duration: 1.2 });
     tl.fromTo($('.meta-r', el), { autoAlpha: 0, x: 90 }, { autoAlpha: 1, x: 0, duration: 1.1, ease: 'power3.out' }, '-=.7');
     tl.fromTo($('.meta-l', el), { autoAlpha: 0, x: -60 }, { autoAlpha: 1, x: 0, duration: 1.1, ease: 'power3.out' }, '<');
+    tl.fromTo($('.team', el), { autoAlpha: 0, y: 40 }, { autoAlpha: 1, y: 0, duration: 1.1, ease: 'power3.out' }, '<.15');
   },
   notes: 'Pembukaan. Perkenalkan kelompok. Tekankan judulnya: kita akan belajar memandang manusia, bukan labelnya. Huruf ODGJ sengaja berongga — nanti terisi di akhir.',
 });

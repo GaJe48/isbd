@@ -1,1 +1,7 @@
-/* tidak ada gaya khusus */
+/* perkenalan: mata kuliah dan dosen di atas, anggota kelompok sebaris di bawah */
+.s01 .meta-l,.s01 .meta-r{top:110px;bottom:auto}
+.s01 .team{position:absolute;left:140px;right:140px;bottom:96px}
+.s01 .team .tk{font:800 22px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-bottom:16px}
+.s01 .team .row{display:grid;grid-template-columns:repeat(5,1fr);gap:24px;border-top:1px solid rgba(255,255,255,.3);padding-top:18px}
+.s01 .team b{display:block;font:700 26px/1.25 var(--body)}
+.s01 .team span{display:block;margin-top:6px;font:500 24px/1 var(--body);font-variant-numeric:tabular-nums;color:rgba(255,255,255,.75)}

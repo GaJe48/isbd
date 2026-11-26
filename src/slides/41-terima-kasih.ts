@@ -12,7 +12,7 @@ export default defineSlide({
     <div class="disp tk pre" style="position:absolute;left:0;right:0;top:330px;text-align:center;font-size:150px">Terima kasih</div>
     <div class="tag pre" style="top:620px">Memandang manusia, bukan labelnya.</div>
     <div class="meta-l pre">${I.matkul}<br>${I.tahun}</div>
-    <div class="meta-r pre"><b>${I.kelompok}</b>${I.anggota.join(' · ')}<br>Dosen: ${I.dosen}</div>`,
+    <div class="meta-r pre"><b>${I.kelompok}</b>Dosen pengampu: ${I.dosen}</div>`,
   init(el) { el._t = FX.svgText($('svg', el)); },
   intro(el, tl) {
     tl.from(el._t, { yPercent: 40, opacity: 0, duration: 1.2, ease: 'expo.out', stagger: .12 }, .3);
